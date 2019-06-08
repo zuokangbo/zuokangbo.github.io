@@ -33,6 +33,14 @@
       
       
       
+        <tags>
+            
+            <tag> 感想 </tag>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -45,6 +53,14 @@
         <content type="html"><![CDATA[<pre><code>@[TOC](我的梦想是什么?)</code></pre><h1 id="我的梦想是什么"><a href="#我的梦想是什么" class="headerlink" title="我的梦想是什么?"></a>我的梦想是什么?</h1><p> 一个人如果活着没有梦想,那和咸鱼有什么区别?<br>请问你的梦想是什么?<br>刚开始接触编程的时候,感觉代码是个神器的世界,在这里你可以为所欲为,然后看到很多大神的框架,软件,在使用别人好的框架,好的软件,那一刻我感觉 “我的梦想就是用代码改变世界!”<br><a id="more"></a></p><h2 id="开始追梦"><a href="#开始追梦" class="headerlink" title="开始追梦"></a>开始追梦</h2><p>有了梦想,我开始了疯狂的奋斗,每天休息4,5个小时,全身心去学习编程,努力还是很快得到了回报,我用了3个月就入门学好了php,就这样开始了我程序员的追梦之旅!</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p> 在工作的时候就感觉时间飞逝,一天天很快过去.晚上睡觉的时候,我就会问自己,我今天到底做了什么功能?我收获了哪些技能?曾经有段时间每天都是该页面,我几乎烦的崩溃,感觉每天都在做无用的东西,后来发现,无论是前段后端,其实都是必不可少的技能,我的心态应该调整,让自己去喜欢前段,同时保持后端的热情.</p><h4 id="。。。。未完待续"><a href="#。。。。未完待续" class="headerlink" title="。。。。未完待续"></a>。。。。未完待续</h4>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 感想 </tag>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -129,22 +145,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
       
     </entry>
     
