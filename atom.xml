@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>个人主页</title>
   
-  
+  <subtitle>愿我的只言片语，为你的成长带来帮助！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myblong.zkb/"/>
