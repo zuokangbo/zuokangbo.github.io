@@ -845,7 +845,7 @@ body {
   cursor: url("images/icon.png"), default;
 }
 .outer {
-  max-width: 964px;
+  max-width: 1964px;
   margin: 0 auto;
   padding: 0 20px;
   positon: relative;
