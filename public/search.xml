@@ -11,6 +11,12 @@
         <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>**</p><p>写一些分享之前我是个人习惯喜欢加一个前言，说说自己的感受，目前mari已经更新到4.5了，有些同学还用以前的，当然主要因为目前3的扩展包网上能找到和谐版吧，不管什么原因，我就介绍一下我一些常用的方法了。我这个不是从最基础开始的，需要有一定的使用基础。我本人接触的东西也比较杂，因为是程序出身，接触过最多的是maya平台的一些流程开发，在艺术方面，主要是场景模型资产和纹理的创建，所以在有些地方会有一些比较特别的想法和经验吧。以后有问题可以互相交流探讨。这里我就简单的阐述一下mari中创建id通道的一种方法，当然方法比较多。灵活运用就好。<br><a id="more"></a></p><h2 id="为什么要创建id"><a href="#为什么要创建id" class="headerlink" title="为什么要创建id"></a>为什么要创建id</h2><p>至于为什么要创建，我想大概用过sp的人大概已经知道了原因了，简单的来说，就是把一个资产分组，按材质的类型等分开，在mari里面单独的去处理每一个部分的纹理，而不影响其他地方。</p><p><strong>创建id的方法有那些</strong></p><p>目前我所知道的是5种，当然是有比较麻烦和快捷的。mari的三种方式，和maya中的两种，稍后会说明</p><p><strong>具体操作部分</strong></p><p>Mari中，比较直接的方式是用selection groups选择组的方式，如下图：</p><p><img src="https://upload-images.jianshu.io/upload_images/17107200-81513ba842a5fa17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/943/format/webp" alt="在这里插入图片描述"></p><p>这种方法是比较直接和快捷的，真直观的选择需要的部分进行创建，当然要绘制在模型表面的选区就不行了。所有就有了第二种方法：<br><img src="https://upload-images.jianshu.io/upload_images/17107200-55d7ffcc7bcdc05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/382/format/webp" alt=""></p><p>新建一个组，在组上创建一个mask，把属于这个身体的操作都放在这个组内去绘制，当然mask的形态也可以直接去调整。</p><p>第三种方法，就是用Mari的扩展包了，这个就非常方便快捷的创建遮罩，</p>]]></content>
       
       
+      <categories>
+          
+          <category> mair相关 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -129,6 +135,12 @@
         <content type="html"><![CDATA[<p>使用了：组装机 - 组装机<br>使用了：其他 - Blender<br>使用了：Celsys - Clip Studio Paint<br>使用了：WACOM - 影拓Pro</p><p>我也是第一次做只有的设计，为一个广告公司设计制作的文创产品效果图，<br>将在6.1和大家见面，今年终于获得授权，自己可以以个人身份发布这个作品了，<br>也是我在站酷上人气最高的一个作品。<br>只是要配合宣传下他们啦。</p><p>话不多说，我家登场啦<del>~</del><del>~</del><del>~</del></p><p>使用软件：Blender 2.74，Cycles，Clip studio Paint，Krita，Gimp 3dsmax vray photoshop</p><p>使用过的软件全写上，据说会给人感觉很牛逼，很厉害的错觉(&gt;_&lt;)</p><p><img src="\img\wenchuang\w1.png" alt=""><br><a id="more"></a><br><img src="\img\wenchuang\w2.png" alt=""><br><img src="\img\wenchuang\w3.png" alt=""><br><img src="\img\wenchuang\w4.png" alt=""><br><img src="\img\wenchuang\w5.png" alt=""><br><img src="\img\wenchuang\w6.png" alt=""><br><img src="\img\wenchuang\w7.png" alt=""><br><img src="\img\wenchuang\w8.png" alt=""><br><img src="\img\wenchuang\w9.png" alt=""></p>]]></content>
       
       
+      <categories>
+          
+          <category> 杂乱系列 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -155,9 +167,31 @@
     
     
     <entry>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
+      
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -171,28 +205,6 @@
       <url>/photos/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
-      
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
