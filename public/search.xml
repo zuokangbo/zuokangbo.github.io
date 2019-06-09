@@ -4,25 +4,27 @@
   
     
     <entry>
-      <title>mari3,如何创建模型的id通道</title>
-      <link href="/2019/06/09/mari3,%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E7%9A%84id%E9%80%9A%E9%81%93/"/>
-      <url>/2019/06/09/mari3,%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E7%9A%84id%E9%80%9A%E9%81%93/</url>
+      <title>【工作流研发类】Nuke TCL语言手册分享</title>
+      <link href="/2019/06/09/workflow/%E3%80%90%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A0%94%E5%8F%91%E7%B1%BB%E3%80%91Nuke%20TCL%E8%AF%AD%E8%A8%80%E6%89%8B%E5%86%8C%E5%88%86%E4%BA%AB/"/>
+      <url>/2019/06/09/workflow/%E3%80%90%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A0%94%E5%8F%91%E7%B1%BB%E3%80%91Nuke%20TCL%E8%AF%AD%E8%A8%80%E6%89%8B%E5%86%8C%E5%88%86%E4%BA%AB/</url>
       
-        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>**</p><p>写一些分享之前我是个人习惯喜欢加一个前言，说说自己的感受，目前mari已经更新到4.5了，有些同学还用以前的，当然主要因为目前3的扩展包网上能找到和谐版吧，不管什么原因，我就介绍一下我一些常用的方法了。我这个不是从最基础开始的，需要有一定的使用基础。我本人接触的东西也比较杂，因为是程序出身，接触过最多的是maya平台的一些流程开发，在艺术方面，主要是场景模型资产和纹理的创建，所以在有些地方会有一些比较特别的想法和经验吧。以后有问题可以互相交流探讨。这里我就简单的阐述一下mari中创建id通道的一种方法，当然方法比较多。灵活运用就好。<br><a id="more"></a></p><h2 id="为什么要创建id"><a href="#为什么要创建id" class="headerlink" title="为什么要创建id"></a>为什么要创建id</h2><p>至于为什么要创建，我想大概用过sp的人大概已经知道了原因了，简单的来说，就是把一个资产分组，按材质的类型等分开，在mari里面单独的去处理每一个部分的纹理，而不影响其他地方。</p><p><strong>创建id的方法有那些</strong></p><p>目前我所知道的是5种，当然是有比较麻烦和快捷的。mari的三种方式，和maya中的两种，稍后会说明</p><p><strong>具体操作部分</strong></p><p>Mari中，比较直接的方式是用selection groups选择组的方式，如下图：</p><p><img src="https://upload-images.jianshu.io/upload_images/17107200-81513ba842a5fa17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/943/format/webp" alt="在这里插入图片描述"></p><p>这种方法是比较直接和快捷的，真直观的选择需要的部分进行创建，当然要绘制在模型表面的选区就不行了。所有就有了第二种方法：<br><img src="https://upload-images.jianshu.io/upload_images/17107200-55d7ffcc7bcdc05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/382/format/webp" alt=""></p><p>新建一个组，在组上创建一个mask，把属于这个身体的操作都放在这个组内去绘制，当然mask的形态也可以直接去调整。</p><p>第三种方法，就是用Mari的扩展包了，这个就非常方便快捷的创建遮罩，</p>]]></content>
+        <content type="html"><![CDATA[<p>*</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><em>前言</em></h2><p><em><br>    这是一份关于Nuke TCL语言（Tool Command Language）详细使用案例说明，可点击下面这个链接。对于nuke一些脚本工具的开发有很大的帮助。<br><a href="http://tmml.sourceforge.net/doc/tcl/" target="_blank" rel="external">http://tmml.sourceforge.net/doc/tcl/</a><br><a id="more"></a><br><img src="https://note.youdao.com/yws/res/222/WEBRESOURCE7a095fc4dc24c76438cdb65875d01eef" alt=""><br><em>*什么是 NUKE TCL</em></em></p><h2 id="…-Nuke-TCL语言有点类似于Maya-MEL和Houdini-HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写"><a href="#…-Nuke-TCL语言有点类似于Maya-MEL和Houdini-HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写" class="headerlink" title=". .. …..Nuke TCL语言有点类似于Maya MEL和Houdini HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写."></a>. .. …..Nuke TCL语言有点类似于Maya MEL和Houdini HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写.</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 获取当前nk文件的路径</span></div><div class="line">[value root.name]</div><div class="line"><span class="comment"># 获取当前nk文件所在的文件夹路径</span></div><div class="line">[file dirname [value root.name]]</div><div class="line"><span class="comment"># 获取当前文件路径任何一个层级的路径</span></div><div class="line">[join [lrange [split [file dirname [value root.name]] /] <span class="number">0</span> end<span class="number">-1</span>] /]</div></pre></td></tr></table></figure><p><img src="https://note.youdao.com/yws/res/218/WEBRESOURCE943311ac450c82fe70b0be71780c2408" alt=""></p><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 获取指定节点的参数值:</span></div><div class="line">[value Read1.first]</div><div class="line"></div><div class="line"><span class="comment"># 获取当前节点的参数值:</span></div><div class="line">[value this.size]</div><div class="line"></div><div class="line"><span class="comment"># 设置指定节点的参数值:</span></div><div class="line">[knob Read1.first <span class="number">10</span>]</div><div class="line"></div><div class="line"><span class="comment"># 获取当前节点的第一帧:</span></div><div class="line">[value this.first_frame]</div><div class="line"></div><div class="line"><span class="comment"># 设置TCL变量:</span></div><div class="line">[set tsize <span class="number">15</span>]</div><div class="line"></div><div class="line"><span class="comment"># 之后可以用$的方式使用该变量来设置参数值:</span></div><div class="line">[knob this.size $tsize]</div><div class="line"></div><div class="line"><span class="comment"># 获取上游节点的名称:</span></div><div class="line">[value this.input.name]</div><div class="line"></div><div class="line"><span class="comment"># 获取Group节点上游节点的名称:</span></div><div class="line">[value this.parent.input.name]</div><div class="line"></div><div class="line"><span class="comment"># 获取不带扩展名的文件路径:</span></div><div class="line">[file rootname [value [topnode].file]]</div><div class="line"></div><div class="line"><span class="comment"># 获取文件名:</span></div><div class="line">[basename [value [topnode].file]]</div><div class="line"></div><div class="line"><span class="comment"># 获取不带扩展名的文件名:</span></div><div class="line">[basename [file rootname [value [topnode].file]]]</div><div class="line"></div><div class="line"><span class="comment"># 通过join和lrange来重新生成想要的文件夹路径(这个类似Python中字符串的split和join的功能):</span></div><div class="line">[join [lrange [file split [value [topnode].file]] <span class="number">0</span> <span class="number">7</span>] /]</div><div class="line"></div><div class="line"><span class="comment"># 快速将Read节点中文件输出到同层级下tga的格式文件</span></div><div class="line">[join [lrange [split [value [topnode].file] .] <span class="number">0</span> end<span class="number">-2</span>] .].%<span class="number">04</span>d.tga</div></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> mair相关 </category>
+          <category> nuke相关 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 贴图 </tag>
+            <tag> nuke </tag>
             
-            <tag> mari </tag>
+            <tag> TCL </tag>
+            
+            <tag> 帮助手册 </tag>
             
         </tags>
       
@@ -167,17 +169,6 @@
     
     
     <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
-      
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -189,11 +180,11 @@
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
       
     </entry>
     
@@ -205,6 +196,17 @@
       <url>/photos/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
