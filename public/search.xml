@@ -163,6 +163,31 @@
     
     
     <entry>
+      <title>Tik Manager</title>
+      <link href="/2019/06/07/5_29diyi/"/>
+      <url>/2019/06/07/5_29diyi/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://i.loli.net/2019/06/10/5cfe6cf7ae94f76165.png" alt="图1"><br><a id="more"></a><br><img src="https://i.loli.net/2019/06/10/5cfe6cf8079dc21771.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf807dac89155.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf808ef287794.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf80b73e73081.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf815c2130604.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf815c7772232.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf818db084080.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf82a48563941.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6cf82e8dd41005.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6d118db7d15207.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6d1197ee849356.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6d119e19a20235.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6d11bf53b36371.png" alt="图1"><br><img src="https://i.loli.net/2019/06/10/5cfe6d11cb72e99032.png" alt="图1"></p><p>Tik Manager 可免费用于个人和商业用途。</p><p>下载地址，在线文档，安装视频 <a href="http://www.ardakutlu.com/tik-manager/" target="_blank" rel="external">http://www.ardakutlu.com/tik-manager/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tik Manager </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>练习 5.30</title>
       <link href="/2017/05/30/5_30/"/>
       <url>/2017/05/30/5_30/</url>
@@ -176,31 +201,6 @@
             <tag> 角色 </tag>
             
             <tag> 渲染 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>文创产品设计 5.29</title>
-      <link href="/2017/05/29/5_29diyi/"/>
-      <url>/2017/05/29/5_29diyi/</url>
-      
-        <content type="html"><![CDATA[<p>使用了：组装机 - 组装机<br>使用了：其他 - Blender<br>使用了：Celsys - Clip Studio Paint<br>使用了：WACOM - 影拓Pro</p><p>我也是第一次做只有的设计，为一个广告公司设计制作的文创产品效果图，<br>将在6.1和大家见面，今年终于获得授权，自己可以以个人身份发布这个作品了，<br>也是我在站酷上人气最高的一个作品。<br>只是要配合宣传下他们啦。</p><p>话不多说，我家登场啦<del>~</del><del>~</del><del>~</del></p><p>使用软件：Blender 2.74，Cycles，Clip studio Paint，Krita，Gimp 3dsmax vray photoshop</p><p>使用过的软件全写上，据说会给人感觉很牛逼，很厉害的错觉(&gt;_&lt;)</p><p><img src="\img\wenchuang\w1.png" alt=""><br><a id="more"></a><br><img src="\img\wenchuang\w2.png" alt=""><br><img src="\img\wenchuang\w3.png" alt=""><br><img src="\img\wenchuang\w4.png" alt=""><br><img src="\img\wenchuang\w5.png" alt=""><br><img src="\img\wenchuang\w6.png" alt=""><br><img src="\img\wenchuang\w7.png" alt=""><br><img src="\img\wenchuang\w8.png" alt=""><br><img src="\img\wenchuang\w9.png" alt=""></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 杂乱系列 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 文创产品设计 </tag>
             
         </tags>
       
@@ -223,11 +223,22 @@
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -245,22 +256,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
