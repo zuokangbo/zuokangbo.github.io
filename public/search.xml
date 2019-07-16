@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Photogrammetry-学习(3)</title>
+      <link href="/2019/07/16/share/photogrmmt(3)/"/>
+      <url>/2019/07/16/share/photogrmmt(3)/</url>
+      
+        <content type="html"><![CDATA[<p>Photogrammetry拍摄的基础<br><a id="more"></a><br><div class="article-inner">          <input type="hidden" class="isFancy">              <header class="article-header">              <h1 class="article-title" itemprop="name">      Photogrammetry 学习之路（3）    </h1>        </header>            <div class="article-info article-info-post">                                <div class="clearfix"></div>      </div>              <div class="article-entry" itemprop="articleBody">                        <h1 id="Photogrammetry软件操作后期基本流程"><a href="#Photogrammetry软件操作后期基本流程" class="headerlink"></a><center>Photogrammetry软件操作后期基本流程</center></h1><a id="more"></a><h2 id="Build-Mesh-（生成网格）"><a href="#Build-Mesh-（生成网格）" class="headerlink"></a>Build Mesh （生成网格）</h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/1.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/1.png" title="操作截图"></a></p><blockquote><p>参数说明</p><ul><li>Surface Type（表面类型) —— 使用默认的Arbitrary 3D</li><li>Source Data（源数据） —— 务必使用Dense Cloud 密集点云，稀疏点云数据太少，无法生成完整的模型</li><li>Face Count（面数） —— 通常都使用最高，确保模型的精细度，后期可以减面</li><li>Interpolation（差值） —— 使用默认或者选择Aggressive，目前我发现影响不大</li><li>Calculate vertex colors（计算顶点信息） —— 这个不勾选，生成模型就没有颜色</li></ul></blockquote><blockquote><p>参数调整之后即可点击OK 执行运算</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/2.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/2.png" title="操作截图"></a></p><blockquote><p>计算完毕之后可以看到模型了</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/3.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/3.png" title="操作截图"></a></p><blockquote><p>你可以点击这些按钮来切换模型的观察方案</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/4.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/4.png" title="操作截图"></a></p><blockquote><p>如果模型没有太大的问题就可以进行下一步</p></blockquote><h2 id="Build-Map-（生成贴图）"><a href="#Build-Map-（生成贴图）" class="headerlink"></a>Build Map （生成贴图）</h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/5.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/5.png" title="操作截图"></a></p><blockquote><p>参数说明</p><ul><li>Mapping Mode（映射类型) —— 选择默认的Generic方式，这里涉及的是UV的展开方式</li><li>Blending Mode（混合模式） —— 这里也是使用默认的Mosaic即可，当然也可以选择Average来柔化贴图</li><li>Texture Size/Count（贴图大小） —— 默认4K已经够大了</li><li>Enable Hole Filling（开启填充洞） —— 默认开启，用来优化模型的破洞</li><li>Enable Ghosting Filter（开启重像滤波器） —— 重像就是俗称的画面糊成一团，这可以可以优化贴图效果</li></ul></blockquote><blockquote><p>确认过参数之后就可以去生成贴图了</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/6.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/6.png" title="操作截图"></a></p><blockquote><p>生成贴图完毕之后 点击上面的按钮查看贴图生成的效果</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/7.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/7.png" title="操作截图"></a></p><blockquote><p>我觉得生成的纹理还是非常的不错的</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/8.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/8.png" title="操作截图"></a></p><h2 id="导出模型"><a href="#导出模型" class="headerlink"></a>导出模型</h2><blockquote><p>导出模型需要对模型右键 选择Export Model…</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/9.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/9.png" title="操作截图"></a></p><blockquote><p>选择保存的路径</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/10.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/10.png" title="操作截图"></a></p><blockquote><p>这里会弹出导出设置窗口</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/11.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/11.png" title="操作截图"></a></p><blockquote><p>参数功能就不一一赘述了，基本上关注一下导出的图片格式即可。<br>另外，比较可惜的是只支持OBJ格式</p></blockquote><h2 id="Maya查看导出的模型"><a href="#Maya查看导出的模型" class="headerlink"></a>Maya查看导出的模型</h2><blockquote><p>将模型导入Maya当中</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/12.png-waterMark" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/12.png-waterMark" title="操作截图"></a></p><blockquote><p>可以开启Flat Lighting 获取更好的观感<br>基本上完美还原了模型的细节，达到了真实可靠的效果</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/13.png-waterMark" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/13.png-waterMark" title="操作截图"></a></p><blockquote><p>从面数上也是挺多的</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/14.png-waterMark" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.picgz.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%BA%8C%EF%BC%89/14.png-waterMark" title="操作截图"></a></p><h1 id="总结"><a href="#总结" class="headerlink"></a>总结</h1><blockquote><p>Photogrammetry软件操作基本流程</p><ul><li>通过照片生成稀疏点云</li><li>通过稀疏点云计算Depth Map，生成密集点云</li><li>通过密集点云计算生成模型</li><li>生成贴图</li><li>导出模型和贴图</li></ul><p>这些操作不适用Agisoft Photoscan，其他照片扫描软件也是一致的。</p></blockquote><h1 id="后记"><a href="#后记" class="headerlink"></a>后记</h1><ul><li>针对扫描的流程，后面我会再出博文讲解，敬请期待。</li></ul>          </div>      </div></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Photogrammetry </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Photogrammetry </tag>
+            
+            <tag> 扫描 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Photogrammetry-学习(2)</title>
       <link href="/2019/07/14/share/photogrmmt(2)/"/>
       <url>/2019/07/14/share/photogrmmt(2)/</url>
@@ -547,6 +574,17 @@
     
     
     <entry>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/photos/ins.css"/>
       <url>/photos/ins.css</url>
@@ -574,17 +612,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
