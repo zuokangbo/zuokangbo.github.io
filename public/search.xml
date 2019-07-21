@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>国外mari直播讲解教学</title>
+      <link href="/2019/07/21/mari%E5%9B%BD%E5%A4%96/"/>
+      <url>/2019/07/21/mari%E5%9B%BD%E5%A4%96/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  在国内贴图制作软件被substance painter大部分占领的情况下，还有一款贴图制作软件没有被国内重视。相比substance painter,MARI可以输出高达精度的贴图纹理和多象限绘制的能力，同时兼顾游戏和影视绘制高精度纹理的需求，对硬件要求也更高。</p><p>**<br><div class="content"><div class="content-container layout-text-media pad-left" style="display: table;"><div class="media" style="float: left;"><div class="text-media"><div class="media-wrapper"><div class="media-container" style="max-width: 1201px;"><div class="media-shadow"><iframe class="media-frame video" autostart="false" frameborder="0" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=59539298&cid=103731994&page=1" style="max-width: 720.6px; height: 405px; width: 720.6px;"></iframe></div><div class="credit"></div></div></div></div></div><div class="text" style="width: 40%; display: table-cell;"><div class="container" style="display: table-cell; width: auto;"><h2 class="date">March 2019</h2><h3>国外mari直播讲解教学</h3><p><a style="font-size:30px; color:#00FA9A;" href="https://www.bilibili.com/video/av59539298/" target="_blank">在线观看</a></p></div></div></div></div></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mair相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贴图 </tag>
+            
+            <tag> mari </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Photogrammetry-学习(4)</title>
+      <link href="/2019/07/21/share/photogrmmt(4)/"/>
+      <url>/2019/07/21/share/photogrmmt(4)/</url>
+      
+        <content type="html"><![CDATA[<p>Photogrammetry拍摄的基础<br><a id="more"></a><br><div class="article-entry" itemprop="articleBody">                        <h1 id="Agisoft-Photoscan-其他功能介绍"><a href="#Agisoft-Photoscan-其他功能介绍" class="headerlink"></a><center>Agisoft Photoscan 其他功能介绍</center></h1><a id="more"></a><h2 id="标记（marker）"><a href="#标记（marker）" class="headerlink"></a>标记（marker）</h2><h3 id="什么是标记？"><a href="#什么是标记？" class="headerlink"></a>什么是标记？</h3><blockquote><p>标记是一些特定标识图案</p></blockquote><h3 id="为什么使用标记？"><a href="#为什么使用标记？" class="headerlink"></a>为什么使用标记？</h3><blockquote><p>使用标记可以更好识别摄像机位置</p></blockquote><h3 id="如何生成标记"><a href="#如何生成标记" class="headerlink"></a>如何生成标记</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/1.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/1.png" title="操作截图"></a></p><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/2.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/2.png" title="操作截图"></a></p><blockquote><p>参数说明</p><ul><li>Marker Type（标记类型）—— 使用默认即可</li><li>Center Point Radius（中心点半径） —— 根据实际环境填写大小</li><li>Target Per Page —— 每一页生成多少标记，建议用6，不浪费纸张</li></ul></blockquote><blockquote><p>确认参数之后点击确定<br>就会生成一个PDF文档</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/3.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/3.png" title="操作截图"></a></p><blockquote><p>打开PDF文档</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/4.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/4.png" title="操作截图"></a></p><blockquote><p>传说中的标记出现了<br>你可以将标记拿去打印<br>然后将标记裁剪下来<br>贴到相应的位置上</p></blockquote><h3 id="如何识别标记"><a href="#如何识别标记" class="headerlink"></a>如何识别标记</h3><blockquote><p>导入图片就可以选择Dectect Markers（检测标记）</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/5.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/5.png" title="操作截图"></a></p><blockquote><p>检测参数使用默认即可</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/6.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/6.png" title="操作截图"></a></p><blockquote><p>检测速度一般比较快</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/7.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/7.png" title="操作截图"></a></p><blockquote><p>检测完成之后就可以看到标记点</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/8.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/8.png" title="操作截图"></a></p><blockquote><p>标记点检测不全可能是因为照片模糊、亮度不够等原因造成<br>这样在进行Align Photos就会自动参考标记点去识别照相机的位置</p></blockquote><h2 id="遮罩蒙版（Mask）"><a href="#遮罩蒙版（Mask）" class="headerlink"></a>遮罩蒙版（Mask）</h2><h3 id="什么是遮罩？"><a href="#什么是遮罩？" class="headerlink"></a>什么是遮罩？</h3><blockquote><p>遮罩顾名思义和PS、AE的遮罩一致<br>用于抠出特定区域</p></blockquote><h3 id="为什么使用遮罩？"><a href="#为什么使用遮罩？" class="headerlink"></a>为什么使用遮罩？</h3><blockquote><p>使用遮罩可以限制识别区域和生成区域<br>加快生成效率<br>提高检测准确性</p></blockquote><h3 id="如何使用遮罩？"><a href="#如何使用遮罩？" class="headerlink"></a>如何使用遮罩？</h3><blockquote><p>Photoscan 提供了基础的抠图工具</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/9.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/9.png" title="操作截图"></a></p><blockquote><p>操作原理和PS一致<br>只是功能有点少<br>不大好用</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/10.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/10.png" title="操作截图"></a></p><blockquote><p>框出区域右键可以看到相应的快捷键操作</p></blockquote><h3 id="导入遮罩"><a href="#导入遮罩" class="headerlink"></a>导入遮罩</h3><blockquote><p>因为软件自带的抠图比较垃圾<br>所以软件提供了导入遮罩的方案</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/11.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/11.png" title="操作截图"></a></p><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/12.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/12.png" title="操作截图"></a></p><blockquote><p>除了Method 和 Filename Template<br>其他参数均用默认即可</p></blockquote><blockquote><p>Agisoft Photoscan 提供了四种遮罩方案</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/13.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/13.png" title="操作截图"></a></p><h4 id="From-Alpha"><a href="#From-Alpha" class="headerlink"></a>From Alpha</h4><blockquote><p>通过图片的Alpha通道导入遮罩<br>可以使用PS抠出遮罩保存到Alpha通道中<br>Photoscan识别图片Alpha通道完成通道导入</p></blockquote><h4 id="From-File"><a href="#From-File" class="headerlink"></a>From File</h4><blockquote><p>通过文件导入遮罩<br>这个需要制作出遮罩的黑白图</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/14.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/14.png" title="操作截图"></a></p><blockquote><p>使用这种方案需要注意Filename Template要使用宏定义{filename}来识别每一个文件名</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/15.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/15.png" title="操作截图"></a></p><h4 id="From-Background"><a href="#From-Background" class="headerlink"></a>From Background</h4><blockquote><p>通过背景生成遮罩<br>这个需要拍摄有背景和没有背景的图片<br>软件会自动匹配两者的区别来生成遮罩</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/16.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/16.png" title="操作截图"></a></p><blockquote><p>这种方案非常适合顶点拍摄<br>在统一环境当中<br>背景也是固定<br>只需要1张背景就可以为每张图片抠出相对准确的遮罩</p></blockquote><h4 id="From-Model"><a href="#From-Model" class="headerlink"></a>From Model</h4><blockquote><p>这个操纵需要生成的模型来抠图<br>但是抠模型只需要1次<br>根据抠出的模型可以自动匹配到每一张图片上<br>速度快，效果也非常好</p></blockquote><h3 id="遮罩操作"><a href="#遮罩操作" class="headerlink"></a>遮罩操作</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/17.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-学习之路（四）/17.png" title="操作截图"></a></p><blockquote><p>使用了遮罩之后 Apply Mask to 选项就可以选择了<br>Key Point 限制识别的范围<br>Tie Point 限制生成的范围</p></blockquote><h2 id="总结"><a href="#总结" class="headerlink"></a>总结</h2><blockquote><ul><li>标记可以让摄像机识别更精确</li><li>遮罩可以优化生成效果、生成更精确</li></ul></blockquote>          </div></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Photogrammetry </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Photogrammetry </tag>
+            
+            <tag> 扫描 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Photogrammetry-学习(3)</title>
       <link href="/2019/07/16/share/photogrmmt(3)/"/>
       <url>/2019/07/16/share/photogrmmt(3)/</url>
@@ -574,6 +628,17 @@
     
     
     <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>相册</title>
       <link href="/photos/index.html"/>
       <url>/photos/index.html</url>
@@ -590,17 +655,6 @@
       <url>/photos/ins.css</url>
       
         <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
