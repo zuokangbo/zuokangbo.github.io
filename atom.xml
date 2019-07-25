@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myblong.zkb/"/>
-  <updated>2019-07-25T15:06:09.981Z</updated>
+  <updated>2019-07-25T16:15:49.145Z</updated>
   <id>https://myblong.zkb/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nuke深度合成笔记</title>
+    <link href="https://myblong.zkb/2019/07/26/share/nuke%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
+    <id>https://myblong.zkb/2019/07/26/share/nuke深度合成/</id>
+    <published>2019-07-25T16:11:53.691Z</published>
+    <updated>2019-07-25T16:15:49.145Z</updated>
+    
+    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  深度通道给CG的后期制作提供了巨大的便利特别是对于LiveAction来说,那可是相当方便的.还有就是对于毛发跟烟雾流体的遮罩问题,也可以完美解决.调节起来也是相当方便的.唯一的问题就是Deep层的数据量是很大的.需要比较多的硬盘空间。</p><p>**<br><a id="more"></a><br><div class="note"><p>通常来说，在一个普通的CG Render中，每一个pixel只有1个sample；可是在Deep pass中，每一个pixel可能有多个sample（同一个2D采样点有多个深度信息）</p><p>Deep实际上是把3D位置信息带到2D世界中来，而且不需要真实3D场景 - 实际上是2.5D</p><p>DeepEXR包括deep data和depth data</p><p>Deep pass肉眼看全黄色，因为R(deep.front) + G(deep.back) &gt;1  ，把Viewer的Exposure调低可以看到细节</p><div class="image-container image-float-center"><div class="image-wrapper"><img src="https://i.loli.net/2019/07/26/5d39d2a26ee3f40836.jpg"></div></div><p>只有Dot节点、NoOp节点和ScanlineRender节点可用于Deep Pipeline</p><p>Octane plug-in 不支持Deep pass，但Arnold plug-in支持</p><p>若想在Nuke里面增加Holdout和准确的Particle System，必须用到Deep Data</p><p>处理完各物体的Deep流程之后必须要Write出不包含Deep的EXR（若有需要可输出DeepEXR）作为下一阶段流程的Precomp</p><p>***************************************************************************************************************</p><p>▼利用Deep Compositing的好处：</p><p>1. 通过DeeptoPoints可以看到3D点云，准确找到摄像机前各物体的位置</p><p>2. 通过不同物体不同的Deep Pass，可以实现物体前后关系互换</p><p>3. 根据深度进行编辑。e.g. 若有运动物体从40米远处运动到20米远，可在nuke中通过ScanlineRende和Camera加入Particle雨、雾(Particle需要DeepHoldout所有东西)</p><p>4. 可以通过ScanlineRende和Camera(Nuke中) / 新增物体Deep Data(C4D)，在场景中增加3D物体，利用Deep进行合成</p><p>***************************************************************************************************************</p><p>▼Deep相关节点：</p><p>【DeepSample】查看指定pixel的sample(1个或多个)</p><p>【DeepRead】读取Deep文件</p><p>【DeepReformat】Deep的Reformat</p><p>【DeepTransform】Deep的Transform</p><p>【DeepCrop】通过znear / zfar 两个截面截取Deep范围，数值可以参考Viewer下方白色数值(当Vewer上方第二格调到deep.front)</p><p>【DeepRecolor】为DeepData染色，2D和3D。若勾选“target input alpha”，证明需要取"color"中的alpha而不是"depth / deep"中的</p><p>【DeepToPoints】根据Camera把Deep转化为3D点云</p><div class="image-container image-float-center"><div class="image-wrapper"><img class="dou-preview-image dou-preview-image-zoom-in" src="https://i.loli.net/2019/07/26/5d39d2cb5a25172882.jpg"></div><p>【DeepCopyBBox】复制BBox，减少系统不必要的运算</p><p>【DeepHoldout】从Main(后景)Holdout掉前景，可以减少不需要的deep data；若全部DeepMerge一起最后输出的DeepData太Heavy。DeepHoldout输出2D Data，可以连接2D节点。</p><p>【DeepMerge】Comebine(=merge) / Holdout，若勾选"drop hidden sample"，藏在后景的Deep Data Sample会被丢弃</p><p>【DeepWrite】单独输出Deep+depth Data</p><p>★输出普通EXR时要在Deep Data转化为2D之后Remove(deep channel和depth channel)，不然Nuke会crash。------ EXR和DeepEXR是分开的</p><p>【DeepToImage】把Deep Data转化为2D画面。DeepToImage输出2D Data，可以连接2D节点。</p><p>【DeepFromImage】上面连接2D画面。z 是到Camera距离的一个平面。没有景深。</p><p>【DeepFromFrames】上面连接2D画面。zmin / zmax 是到Camera距离的范围。比起DeepFromImage会有景深感，但只是一个静帧。</p><div class="image-container image-float-center"><div class="image-wrapper"><img class="dou-preview-image dou-preview-image-zoom-in" src="https://i.loli.net/2019/07/26/5d39d2a29802035436.jpg"></div></div><p></p><p></p><p></p><p></p><p></p></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></div></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;**&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  深度通道给CG的后期制作提供了巨大的便利特别是对于LiveAction来说,那可是相当方便的.还有就是对于毛发跟烟雾流体的遮罩问题,也可以完美解决.调节起来也是相当方便的.唯一的问题就是Deep层的数据量是很大的.需要比较多的硬盘空间。&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+    
+    </summary>
+    
+      <category term="nuke相关" scheme="https://myblong.zkb/categories/nuke%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="nuke" scheme="https://myblong.zkb/tags/nuke/"/>
+    
+      <category term="深度合成" scheme="https://myblong.zkb/tags/%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
+    
+  </entry>
   
   <entry>
     <title>mari4.5猫的皮肤纹理绘制</title>
@@ -472,33 +498,6 @@
       <category term="分享" scheme="https://myblong.zkb/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="Photogrammetry 完全指南" scheme="https://myblong.zkb/tags/Photogrammetry-%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【工作流研发类】Nuke TCL语言手册分享</title>
-    <link href="https://myblong.zkb/2019/06/09/workflow/%E3%80%90%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A0%94%E5%8F%91%E7%B1%BB%E3%80%91Nuke%20TCL%E8%AF%AD%E8%A8%80%E6%89%8B%E5%86%8C%E5%88%86%E4%BA%AB/"/>
-    <id>https://myblong.zkb/2019/06/09/workflow/【工作流研发类】Nuke TCL语言手册分享/</id>
-    <published>2019-06-09T03:26:02.830Z</published>
-    <updated>2019-06-09T03:35:12.610Z</updated>
-    
-    <content type="html"><![CDATA[<p>*</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><em>前言</em></h2><p><em><br>    这是一份关于Nuke TCL语言（Tool Command Language）详细使用案例说明，可点击下面这个链接。对于nuke一些脚本工具的开发有很大的帮助。<br><a href="http://tmml.sourceforge.net/doc/tcl/" target="_blank" rel="external">http://tmml.sourceforge.net/doc/tcl/</a><br><a id="more"></a><br><img src="https://note.youdao.com/yws/res/222/WEBRESOURCE7a095fc4dc24c76438cdb65875d01eef" alt=""><br><em>*什么是 NUKE TCL</em></em></p><h2 id="…-Nuke-TCL语言有点类似于Maya-MEL和Houdini-HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写"><a href="#…-Nuke-TCL语言有点类似于Maya-MEL和Houdini-HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写" class="headerlink" title=". .. …..Nuke TCL语言有点类似于Maya MEL和Houdini HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写."></a>. .. …..Nuke TCL语言有点类似于Maya MEL和Houdini HScripts，编程语言万变不离其宗，都有变量，数据类型，内置函数，函数传参，流控制语句以及自定义函数等这些共通的东西，所以写起来并不麻烦，比如现在想获取当前nk文件的上上个文件夹的层级路径就可以这样来写.</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 获取当前nk文件的路径</span></div><div class="line">[value root.name]</div><div class="line"><span class="comment"># 获取当前nk文件所在的文件夹路径</span></div><div class="line">[file dirname [value root.name]]</div><div class="line"><span class="comment"># 获取当前文件路径任何一个层级的路径</span></div><div class="line">[join [lrange [split [file dirname [value root.name]] /] <span class="number">0</span> end<span class="number">-1</span>] /]</div></pre></td></tr></table></figure><p><img src="https://note.youdao.com/yws/res/218/WEBRESOURCE943311ac450c82fe70b0be71780c2408" alt=""></p><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 获取指定节点的参数值:</span></div><div class="line">[value Read1.first]</div><div class="line"></div><div class="line"><span class="comment"># 获取当前节点的参数值:</span></div><div class="line">[value this.size]</div><div class="line"></div><div class="line"><span class="comment"># 设置指定节点的参数值:</span></div><div class="line">[knob Read1.first <span class="number">10</span>]</div><div class="line"></div><div class="line"><span class="comment"># 获取当前节点的第一帧:</span></div><div class="line">[value this.first_frame]</div><div class="line"></div><div class="line"><span class="comment"># 设置TCL变量:</span></div><div class="line">[set tsize <span class="number">15</span>]</div><div class="line"></div><div class="line"><span class="comment"># 之后可以用$的方式使用该变量来设置参数值:</span></div><div class="line">[knob this.size $tsize]</div><div class="line"></div><div class="line"><span class="comment"># 获取上游节点的名称:</span></div><div class="line">[value this.input.name]</div><div class="line"></div><div class="line"><span class="comment"># 获取Group节点上游节点的名称:</span></div><div class="line">[value this.parent.input.name]</div><div class="line"></div><div class="line"><span class="comment"># 获取不带扩展名的文件路径:</span></div><div class="line">[file rootname [value [topnode].file]]</div><div class="line"></div><div class="line"><span class="comment"># 获取文件名:</span></div><div class="line">[basename [value [topnode].file]]</div><div class="line"></div><div class="line"><span class="comment"># 获取不带扩展名的文件名:</span></div><div class="line">[basename [file rootname [value [topnode].file]]]</div><div class="line"></div><div class="line"><span class="comment"># 通过join和lrange来重新生成想要的文件夹路径(这个类似Python中字符串的split和join的功能):</span></div><div class="line">[join [lrange [file split [value [topnode].file]] <span class="number">0</span> <span class="number">7</span>] /]</div><div class="line"></div><div class="line"><span class="comment"># 快速将Read节点中文件输出到同层级下tga的格式文件</span></div><div class="line">[join [lrange [split [value [topnode].file] .] <span class="number">0</span> end<span class="number">-2</span>] .].%<span class="number">04</span>d.tga</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;*&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;&lt;em&gt;前言&lt;/em&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;&lt;br&gt;    这是一份关于Nuke TCL语言（Tool Command Language）详细使用案例说明，可点击下面这个链接。对于nuke一些脚本工具的开发有很大的帮助。&lt;br&gt;&lt;a href=&quot;http://tmml.sourceforge.net/doc/tcl/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://tmml.sourceforge.net/doc/tcl/&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="nuke相关" scheme="https://myblong.zkb/categories/nuke%E7%9B%B8%E5%85%B3/"/>
-    
-    
-      <category term="nuke" scheme="https://myblong.zkb/tags/nuke/"/>
-    
-      <category term="TCL" scheme="https://myblong.zkb/tags/TCL/"/>
-    
-      <category term="帮助手册" scheme="https://myblong.zkb/tags/%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C/"/>
     
   </entry>
   
