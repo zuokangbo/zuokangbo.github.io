@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>mari4.5猫的皮肤纹理绘制</title>
+      <link href="/2019/07/25/share/mari%E7%8C%AB%E7%9A%84%E7%9A%AE%E8%82%A4%E7%BA%B9%E7%90%86%E7%BB%98%E5%88%B6/"/>
+      <url>/2019/07/25/share/mari%E7%8C%AB%E7%9A%84%E7%9A%AE%E8%82%A4%E7%BA%B9%E7%90%86%E7%BB%98%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  在国内贴图制作软件被substance painter大部分占领的情况下，还有一款贴图制作软件没有被国内重视。相比substance painter,MARI可以输出高达精度的贴图纹理和多象限绘制的能力，同时兼顾游戏和影视绘制高精度纹理的需求，对硬件要求也更高。</p><p>**<br><a id="more"></a><br><div class="content"><div class="content-container layout-text-media pad-left" style="display: table;"><div class="media" style="float: left;"><div class="text-media"><div class="media-wrapper"><div class="media-container" style="max-width: 1201px;"><div class="media-shadow"><iframe class="media-frame video" autostart="false" frameborder="0" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=60703360&cid=105651175&page=1" style="max-width: 720.6px; height: 405px; width: 720.6px;"></iframe></div><div class="credit"></div></div></div></div></div><div class="text" style="width: 40%; display: table-cell;"><div class="container" style="display: table-cell; width: auto;"><h2 class="date">March 2019</h2><h3>国外mari直播讲解教学</h3><p><a style="font-size:30px; color:#00FA9A;" href="https://www.bilibili.com/video/av60703360" target="_blank">在线观看</a></p></div></div></div></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mair相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贴图 </tag>
+            
+            <tag> mari </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>敏捷开发指导思想</title>
       <link href="/2019/07/24/share/%E5%BC%80%E5%8F%91%E7%9A%84%E6%8C%87%E5%AF%BC%E6%80%9D%E6%83%B3/"/>
       <url>/2019/07/24/share/%E5%BC%80%E5%8F%91%E7%9A%84%E6%8C%87%E5%AF%BC%E6%80%9D%E6%83%B3/</url>
@@ -670,17 +697,6 @@
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/photos/ins.css"/>
       <url>/photos/ins.css</url>
@@ -692,9 +708,9 @@
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -703,9 +719,20 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
