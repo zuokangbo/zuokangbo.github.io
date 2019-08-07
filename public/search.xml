@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>mklink符号链接技术</title>
+      <link href="/2019/08/07/share/mklink/"/>
+      <url>/2019/08/07/share/mklink/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我相信用过Linux系统的童鞋都很喜欢挂载文件的操作方式，而Windows系统更多的是通过共享来映射网络驱动器的操作方式，Windows的这种操作方式会带来一个很大的瓶颈就是一旦项目增多，存储容量不够用，我们就不得不另外开辟一个盘符来存放更多的项目文件，这往往是很难管理的。我们试想是否有这样技术，在存储方面我们不用管文件具体存放在哪个硬盘上，这是运维的事，我们暴露给制作的所有项目文件都在同一个projects文件夹中，有没有这样的技术呢，有，mklink符号链接技术，这个技术可以解决的不单单是上面这一个问题，好处多多，值得研究一下</p><p>**<br><a id="more"></a><br><section style="overflow: hidden;"><p><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;我相信用过Linux系统的童鞋都很喜欢挂载文件的操作方式，而Windows系统更多的是通过共享来映射网络驱动器的操作方式，Windows的这种操作方式会带来一个很大的瓶颈就是一旦项目增多，存储容量不够用，我们就不得不另外开辟一个盘符来存放更多的项目文件，这往往是很难管理的。我们试想是否有这样技术，在存储方面我们不用管文件具体存放在哪个硬盘上，这是运维的事，我们暴露给制作的所有项目文件都在同一个projects文件夹中，有没有这样的技术呢，有，mklink符号链接技术，这个技术可以解决的不单单是上面这一个问题，好处多多，值得研究一下，<span style="color: rgb(77, 77, 77); font-family: &quot;Microsoft YaHei&quot;, &quot;SF Pro Display&quot;, Roboto, Noto, Arial, &quot;PingFang SC&quot;, sans-serif; font-variant-ligatures: common-ligatures;">通过 mklink 命令可以创建文件或文件夹的链接，而这种链接跟快捷方式是不一样的。然而我们还可能会遇到其使用过程中的一些坑，本文将整理这些坑并提供解决方法。</span></p><p><span style="color: rgb(77, 77, 77); font-family: &quot;Microsoft YaHei&quot;, &quot;SF Pro Display&quot;, Roboto, Noto, Arial, &quot;PingFang SC&quot;, sans-serif; font-variant-ligatures: common-ligatures;"></span></p><p><span>mklink 可以像创建快捷方式一样建立文件或文件夹的链接，但不同于快捷方式的是，mklink 创建的链接绝大多数程序都不会认为那是一个链接，而是一个实实在在的文件或文件夹。</span></p><p><br></p><p><span>例如，为 D:\OneDrive\Foo 文件夹创建链接到 D:\Foo，那么 D:\OneDrive\Foo 中有一个 .git 文件时，绝大多数程序都会以为 D:\Foo 中也存在 .git 文件，而且文件内容一模一样。</span></p><p><br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;我们以管理员身份打开命令行窗口，输入mklink命令回车。<br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.8021108179419525" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558869815.gif" data-type="png" data-w="379" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558869815.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;这个符号链接到底能干什么呢？你可以把它类比于快捷方式，但是我们知道一个文件夹的快捷方式，虽然它不占用什么空间，可以丢到任何地方，但是你一打开这个快捷方式，它真正的路径还是目标路径，而符号链接不一样，它可以虚拟一个真正的路径出来，暴露给制作的只有一个项目路径，而真正存储可以遍布几个存储服务器。<br></p><p>&nbsp;&nbsp;&nbsp;&nbsp;还是举例来说明吧，比如现在有两个服务器的共享路径，\\andy\server01和\\andy\server02，每个服务器上都存储了若干项目。</p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.2718631178707224" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558886419.gif" data-type="png" data-w="526" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558886419.gif"></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.2264808362369338" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558440589.gif" data-type="png" style="" data-w="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558440589.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;此时我们有一个共享盘是面向制作的，那么我们如何将这五个项目放在我们这个共享盘里呢？<br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.3992490613266583" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558107061.gif" data-type="png" data-w="799" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558107061.gif"></p><p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;我们在\\andy\projects所在的服务器上用管理员身份执行下面的命令<br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.4859154929577465" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558483940.gif" data-type="png" data-w="568" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558483940.gif"></p><p>&nbsp; &nbsp; 下面神奇的事情会发生，五个项目在一起了，它们看似是快捷方式，但它们的路径却真真实实是Z盘的路径，而不是\\andy\server01或者\\andy\server02，而且在这里读写文件会同步到存储服务器，同样存储服务器读写文件也会同步到Z盘，这很好要的就是这样的效果。<br></p><p style="text-align: center;"><img class="rich_pages" data-copyright="0" data-ratio="0.6125" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558308285.gif" data-type="gif" data-w="640" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558308285.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;但是别高兴太早，我们会遇到两个棘手的问题，一个是AD域环境下域用户权限问题。<br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.47468354430379744" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558929052.gif" data-type="png" data-w="316" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558929052.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;这个问题好解决，管理员身份运行命令行窗口，输入下面两条命令<br></p><p><br></p><p></p><section class="code-snippet__fix code-snippet__js"><ul class="code-snippet__line-index code-snippet__js list-paddingleft-2"><li><p><br></p></li><li><p><br></p></li></ul><p><code><span class="code-snippet_outer"><span class="code-snippet__selector-tag">fsutil</span> <span class="code-snippet__selector-tag">behavior</span> <span class="code-snippet__selector-tag">query</span> <span class="code-snippet__selector-tag">SymlinkEvaluation</span></span></code><code><span class="code-snippet_outer"><span class="code-snippet__selector-tag">fsutil</span> <span class="code-snippet__selector-tag">behavior</span> <span class="code-snippet__selector-tag">set</span> <span class="code-snippet__selector-tag">SymlinkEvaluation</span> <span class="code-snippet__selector-tag">L2L</span><span class="code-snippet__selector-pseudo">:1</span> <span class="code-snippet__selector-tag">R2R</span><span class="code-snippet__selector-pseudo">:1</span> <span class="code-snippet__selector-tag">L2R</span><span class="code-snippet__selector-pseudo">:1</span> <span class="code-snippet__selector-tag">R2L</span><span class="code-snippet__selector-pseudo">:1</span></span></code></p></section><p></p><p><br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.22458270106221548" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558373087.gif" data-type="png" data-w="659" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558373087.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;完事之后又遇到另一个让人讨厌的问题，看动图，一旦我点击上方的路径中的符号链接的时候，它会跳转到目标路径，不在是Z盘，让人头疼，这不是我想要的，伪装那就伪装到底。<br></p><p style="text-align: center;"><img class="rich_pages" data-copyright="0" data-ratio="0.6125" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558481840.gif" data-type="gif" data-w="640" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558481840.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;因此查了一下mklink详细的用法。<br></p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.5799050632911392" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558331239.gif" data-type="png" data-w="1264" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558331239.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;这里使用/j参数可以解决路径跳转的这个问题，但是/j只支持本地卷，比如我这样写会失败。</p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.11188811188811189" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558302364.gif" data-type="png" data-w="572" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558302364.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;因此这里想了个办法，虽然啰嗦了一步，但能解决问题，首先我们用/d来将网络路径链接到本地，然后再将本地的这个符号链接通过/j链接到projects，下面写一个批处理文件mklink.bat，文件内容如下：</p><p></p><section class="code-snippet__fix code-snippet__js"><p><br></p><p><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/d D:\LINK\PRO01 \\andy\server01\PRO01</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/d D:\LINK\PRO02 \\andy\server01\PRO02</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/d D:\LINK\PRO03 \\andy\server01\PRO03</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/d D:\LINK\PRO04 \\andy\server02\PRO04</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/d D:\LINK\PRO05 \\andy\server02\PRO05</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/j D:\projects\PRO01 D:\LINK\PRO01</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/j D:\projects\PRO02 D:\LINK\PRO02</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/j D:\projects\PRO03 D:\LINK\PRO03</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/j D:\projects\PRO04 D:\LINK\PRO04</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">mklink</span> <span style="max-width: 1000%;color: rgb(221, 17, 68)">/j D:\projects\PRO05 D:\LINK\PRO05</span></span></code><code style="max-width: 1000%;text-align: left;white-space: pre;display: flex;position: relative;font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace"><span style="max-width: 1000%"><span style="max-width: 1000%">pause</span></span></code></p></section><p></p><p><br></p><p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;以管理员身份运行mklink.bat</p><p style="text-align: center;"><img class="rich_pages" data-ratio="0.9945255474452555" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558215187.gif" data-type="png" data-w="548" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558215187.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;完美，再来看看我们的Z盘路径是否还跳转<br></p><p style="text-align: center;"><img class="rich_pages" data-copyright="0" data-ratio="0.6125" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558965339.gif" data-type="gif" data-w="640" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565139558965339.gif"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;完美，完美要知道这五个PRO的符号链接的文件夹是不占用任何空间的，这种技术是很有意义的，不光光方便项目管理，很多存储路径的问题都可以来解决，比如现在有个项目结束了需要备份到别的地方，但是又不想制作找不到这个项目，就可以这样链接过来，所有资产路径完全没有更改就可以使用。</p><p style="text-align: right;" class=""><br></p><p><!--!doctype--></p><p><br></p></section><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mklink符号链接技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mklink </tag>
+            
+            <tag> 部署 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>集中式部署Deadline</title>
       <link href="/2019/08/05/share/%E9%9B%86%E4%B8%AD%E5%BC%8F%E9%83%A8%E7%BD%B2Deadline/"/>
       <url>/2019/08/05/share/%E9%9B%86%E4%B8%AD%E5%BC%8F%E9%83%A8%E7%BD%B2Deadline/</url>
@@ -20,9 +47,9 @@
       
         <tags>
             
-            <tag> Deadline </tag>
-            
             <tag> 部署 </tag>
+            
+            <tag> Deadline </tag>
             
         </tags>
       
@@ -832,17 +859,6 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>相册</title>
       <link href="/photos/index.html"/>
       <url>/photos/index.html</url>
@@ -854,9 +870,9 @@
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -870,6 +886,17 @@
       <url>/photos/ins.css</url>
       
         <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
