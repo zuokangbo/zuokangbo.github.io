@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>鸽子的动画效果</title>
+      <link href="/2019/08/11/share/amint_1/"/>
+      <url>/2019/08/11/share/amint_1/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一个非常有趣的方形纸片折成飞动的鸽子的动画效果</p><p>**<br><a id="more"></a><br><section data-role="outer" label="Powered by 365editor" style="font-family:微软雅黑;font-size:16px;"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><p style="text-align: center;">一个非常有趣的方形纸片折成飞动的鸽子的动画效果</p><p style="text-align: left;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534897133.gif" data-ratio="0.6175" data-w="400" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534897133.gif" style="max-width: 100%; height: auto;"><br>&nbsp; 在使用三维设计软件制作这样的效果时，遇到最大的难题是如何能够实现多次的折叠，在这里采用了一个非常有效的思路，就是使用替换的方法，假如我们将每个折叠的动画效果拆分开来，采用不同的模型进行模拟，然后再将他们统一起来，相互替换实现连贯的动态效果，这样制作将会变得非常简单明了。</p><p style="text-align: center;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534391514.gif" data-ratio="0.7619047619047619" data-w="462" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534391514.gif" style="max-width: 100%; height: auto;"></p><p style="text-align: center;">使用替换实现连贯动态效果的思路</p><p style="text-align: center;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534318926.gif" data-ratio="0.7619047619047619" data-w="462" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534318926.gif" style="max-width: 100%; height: auto;"><br>这里可以看到，我们用3Dsmax实现了这个效果。</p><p style="text-align: left;"><span style="text-align: left; line-height: 1.6;">&nbsp; 折成鸽子需要五个步骤，所以这些步骤被拆开，采用了五个模型模拟其步骤的折叠动画，每个模型都有一个初始形态和最后形态，新一步骤的模型初始形态为前一步骤模型的最后形态。最后我们采用了粒子系统，使替换变得自动化，省去了手动设置关键帧的麻烦。</span><br></p><p style="text-align: left;"><br></p><p style="text-align: left;"><span style="text-align: left; line-height: 1.6;">&nbsp; 关于模型的动画，我们采用了“X变换”修改器配合“多边形选择”修改器来实现</span></p><p style="text-align: center;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534701319.gif" data-ratio="0.7619047619047619" data-w="462" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534701319.gif" style="max-width: 100%; height: auto;"></p><p style="text-align: left;"><br>&nbsp; 在基础模型上添加了“多边形选择”修改器，用于选择需要移动的模型顶点，然后使用“X变换”修改器使模型折叠，“X变换”修改器可以调整折叠中心点。为其添加关键点，便可以制作成为动态的效果。</p><p style="text-align: left;"><br></p><p style="text-align: left;">&nbsp; 为前一个步骤的模型实现动态效果之后，我们就可以通过复制，再将复制的模型动态效果中的最后形态，转换为可编辑多边形，这样就获得了新的一个步骤的初始形态。</p><p style="text-align: center;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534775107.gif" data-ratio="0.6636690647482014" data-w="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534775107.gif" style="max-width: 100%; height: auto;"></p><p style="text-align: center;"><br></p><p style="text-align: left;">&nbsp;我们可以通过快速切片，为新的步骤模型添加新的折线，以方便模型再做新的折叠动画，在这里可以随意添加线段。<br></p><p style="text-align: left;">&nbsp; 除了使用“X变换”修改器来使模型折叠，我们还可以使用骨骼+蒙皮的方法来折叠模型，骨骼可以精确的决定折叠的方向，非常有用。</p><p style="text-align: center;"><img data-type="gif" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534483000.gif" data-ratio="0.8054711246200608" data-w="329" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565520534483000.gif" style="max-width: 100%; height: auto;"><br></p><!--!doctype--></section><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 动画 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动画 </tag>
+            
+            <tag> 小知识 </tag>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mklink符号链接技术</title>
       <link href="/2019/08/07/share/mklink/"/>
       <url>/2019/08/07/share/mklink/</url>
@@ -494,9 +523,9 @@
       
         <tags>
             
-            <tag> maya插件 </tag>
-            
             <tag> 分享 </tag>
+            
+            <tag> maya插件 </tag>
             
         </tags>
       
@@ -859,11 +888,11 @@
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
       
     </entry>
     
@@ -881,22 +910,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
