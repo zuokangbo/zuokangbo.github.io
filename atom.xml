@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/zuokangbo/zuokangbo.github.io/"/>
-  <updated>2019-08-11T10:55:24.749Z</updated>
+  <updated>2019-08-11T11:31:57.415Z</updated>
   <id>https://github.com/zuokangbo/zuokangbo.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mari4.5扩展包</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/11/share/mariexprt/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/11/share/mariexprt/</id>
+    <published>2019-08-11T11:31:06.279Z</published>
+    <updated>2019-08-11T11:31:57.415Z</updated>
+    
+    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  mari4扩展包教程，</p><p>**<br><a id="more"></a><br><div class="content"><div class="content-container layout-text-media pad-left" style="display: table;"><div class="media" style="float: left;"><div class="text-media"><div class="media-wrapper"><div class="media-container" style="max-width: 1201px;"><div class="media-shadow"><iframe class="media-frame video" autostart="false" frameborder="0" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=63089817&cid=109578805&page=1" style="max-width: 720.6px; height: 405px; width: 720.6px;"></iframe></div><div class="credit"></div></div></div></div></div><div class="text" style="width: 40%; display: table-cell;"><div class="container" style="display: table-cell; width: auto;"><h2 class="date">March 2019</h2><h3>国外mari扩展包教学</h3><p><a style="font-size:30px; color:#00FA9A;" href="https://www.bilibili.com/video/av60703360" target="_blank">在线观看</a></p></div></div></div></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;**&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  mari4扩展包教程，&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mair相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/mair%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="贴图" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E8%B4%B4%E5%9B%BE/"/>
+    
+      <category term="mari" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari/"/>
+    
+      <category term="mari扩展包" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari%E6%89%A9%E5%B1%95%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>鸽子的动画效果</title>
@@ -36,11 +64,11 @@
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/%E5%8A%A8%E7%94%BB/"/>
     
     
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
     
       <category term="小知识" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -486,30 +514,6 @@
       <category term="python" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/python/"/>
     
       <category term="python基础" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Maya选择插件_PatternSelection</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/13/share/Maya%E9%80%89%E6%8B%A9%E6%8F%92%E4%BB%B6_PatternSelection/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/06/13/share/Maya选择插件_PatternSelection/</id>
-    <published>2019-06-13T14:18:26.790Z</published>
-    <updated>2019-06-13T14:19:55.480Z</updated>
-    
-    <content type="html"><![CDATA[<p>Maya选择插件_PatternSelection<br><a id="more"></a><br><article class="article-content"><p><img src="http://wx2.sinaimg.cn/large/0062H1pggy1fqmy36im8zg30jg0jgqv5.gif" alt="Maya选择插件 PatternSelection" title="Maya选择插件 PatternSelection"></p><p>Pattern Selection是一个maya脚本，它选择当前选中模式中的下一个组件。适用于边缘(循环和环)，顶点和面。最好的解释如上图。</p><p>安装方法：</p><p><span style="color: #99cc00;">第一种（快捷键）</span>：</p><p>将.py文件复制到Documents/maya/版本/scripts 里面</p><p>打开maya，设置快捷键。<img src="http://wx2.sinaimg.cn/large/0062H1pggy1fqmy263vzjj312k0i23zr.jpg" alt="Maya选择插件 PatternSelection" title="Maya选择插件 PatternSelection"></p><p>为下面两段脚本分别设置快捷键：</p><pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="kwd">import</span><span class="pln"> patternSelection</span><span class="pun">;</span></li><li class="L1"><span class="pln">patternSelection</span><span class="pun">.</span><span class="pln">patternSelection</span><span class="pun">()</span></li></ol></pre><pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="kwd">import</span><span class="pln"> patternSelection</span><span class="pun">;</span></li><li class="L1"><span class="pln">patternSelection</span><span class="pun">.</span><span class="pln">patternSelectionRepeat</span><span class="pun">()</span></li></ol></pre><p>然后保存，重开maya。</p><p><span style="color: #99cc00;">第二种（按钮）</span>：讲上面两段脚本分别拖到工具架。</p><p>&nbsp;</p><table width="397"><colgroup><col width="76"><col width="107"><col width="107"><col width="107"></colgroup><tbody><tr><td width="76">文件名称</td><td colspan="3" width="107">&nbsp;patternSelection</td></tr><tr><td width="76">文件大小</td><td colspan="3" width="107">&nbsp;.py</td></tr><tr><td width="76">文件格式</td><td colspan="3" width="107">&nbsp;10kb</td></tr><tr><td width="76">支持版本</td><td colspan="3" width="107">&nbsp;理论上支持2012+，只测试了2016.5和2017</td></tr><tr><td width="76">备注</td><td colspan="3" width="107"></td></tr><tr><td width="76">下载链接</td><td colspan="3" width="107">https://pan.baidu.com/s/1d1muN0D3Q2oLGY88pS5Sww</td></tr><tr><td width="76">解压密码</td><td colspan="3" width="107">&nbsp;6666</td></tr></tbody></table><p>&nbsp;</p><p>&nbsp;</p></article></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Maya选择插件_PatternSelection&lt;br&gt;
-    
-    </summary>
-    
-      <category term="maya插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/maya%E6%8F%92%E4%BB%B6/"/>
-    
-    
-      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="maya插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/maya%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   

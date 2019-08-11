@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>mari4.5扩展包</title>
+      <link href="/2019/08/11/share/mariexprt/"/>
+      <url>/2019/08/11/share/mariexprt/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  mari4扩展包教程，</p><p>**<br><a id="more"></a><br><div class="content"><div class="content-container layout-text-media pad-left" style="display: table;"><div class="media" style="float: left;"><div class="text-media"><div class="media-wrapper"><div class="media-container" style="max-width: 1201px;"><div class="media-shadow"><iframe class="media-frame video" autostart="false" frameborder="0" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=63089817&cid=109578805&page=1" style="max-width: 720.6px; height: 405px; width: 720.6px;"></iframe></div><div class="credit"></div></div></div></div></div><div class="text" style="width: 40%; display: table-cell;"><div class="container" style="display: table-cell; width: auto;"><h2 class="date">March 2019</h2><h3>国外mari扩展包教学</h3><p><a style="font-size:30px; color:#00FA9A;" href="https://www.bilibili.com/video/av60703360" target="_blank">在线观看</a></p></div></div></div></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mair相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贴图 </tag>
+            
+            <tag> mari </tag>
+            
+            <tag> mari扩展包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>鸽子的动画效果</title>
       <link href="/2019/08/11/share/amint_1/"/>
       <url>/2019/08/11/share/amint_1/</url>
@@ -20,11 +49,11 @@
       
         <tags>
             
+            <tag> 分享 </tag>
+            
             <tag> 动画 </tag>
             
             <tag> 小知识 </tag>
-            
-            <tag> 分享 </tag>
             
         </tags>
       
@@ -523,9 +552,9 @@
       
         <tags>
             
-            <tag> 分享 </tag>
-            
             <tag> maya插件 </tag>
+            
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -899,6 +928,17 @@
     
     
     <entry>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -915,17 +955,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
