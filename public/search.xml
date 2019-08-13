@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>mari4.5扩展包帮助文档</title>
+      <link href="/2019/08/13/share/mari_help/"/>
+      <url>/2019/08/13/share/mari_help/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  mari4扩展包帮助文档，</p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1000" width="1500" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mair相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 贴图 </tag>
+            
+            <tag> mari </tag>
+            
+            <tag> mari扩展包 </tag>
+            
+            <tag> mari帮助文档 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mari4.5扩展包</title>
       <link href="/2019/08/11/share/mariexprt/"/>
       <url>/2019/08/11/share/mariexprt/</url>
@@ -49,11 +80,11 @@
       
         <tags>
             
-            <tag> 分享 </tag>
-            
             <tag> 动画 </tag>
             
             <tag> 小知识 </tag>
+            
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -552,9 +583,9 @@
       
         <tags>
             
-            <tag> maya插件 </tag>
-            
             <tag> 分享 </tag>
+            
+            <tag> maya插件 </tag>
             
         </tags>
       
