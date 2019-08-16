@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/zuokangbo/zuokangbo.github.io/"/>
-  <updated>2019-08-13T15:06:06.662Z</updated>
+  <updated>2019-08-16T15:30:54.798Z</updated>
   <id>https://github.com/zuokangbo/zuokangbo.github.io/</id>
   
   <author>
@@ -17,32 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>mari4.5扩展包帮助文档</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/</id>
-    <published>2019-08-13T15:05:18.704Z</published>
-    <updated>2019-08-13T15:06:06.662Z</updated>
+    <title> Houdini - 计算模型体积 过滤问题模型</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/16/share/houdini_help/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/16/share/houdini_help/</id>
+    <published>2019-08-16T15:30:54.726Z</published>
+    <updated>2019-08-16T15:30:54.798Z</updated>
     
-    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  mari4扩展包帮助文档，</p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1000" width="1500" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？<br>  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了</p><p>**<br><a id="more"></a><br><div class="article-inner">          <input type="hidden" class="isFancy">              <header class="article-header">              <h1 class="article-title" itemprop="name">      Houdini - 计算模型体积 过滤问题模型    </h1>        </header>                    <div class="article-entry" itemprop="articleBody">                        <h1 id="批量遍历模型-过滤体积小的部分"><a href="#批量遍历模型-过滤体积小的部分" class="headerlink"></a>批量遍历模型 过滤体积小的部分<h2 id="measure节点"><a href="#measure节点" class="headerlink"></a>measure节点</h2><blockquote><p>&emsp;&emsp;然而事情并没有我想象的那么顺利。<br>&emsp;&emsp;我们这边的模型是一堆box<br>&emsp;&emsp;如果直接连接measure节点，会根据模型上的每个面进行体积计算<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;我需要的是对单个模型进行计算。<br>&emsp;&emsp;然而如此循环遍历单个模型呢？<br>&emsp;&emsp;我最开始是想用类似破碎的方案，直接加入assemble节点打包，<br>&emsp;&emsp;循环遍历所有的物体。<br>&emsp;&emsp;然而这样根本就计算不出体积。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/2.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/2.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;因此我想到所有的box都丢进循环中<br>&emsp;&emsp;最开始也不知道怎么操作，测试了一下就是弄好出来了<br>&emsp;&emsp;添加connective节点将所有的模型面编号统一输出一个class属性，Houdini 16.5 的foreach节点自带相关操作了。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/3.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/3.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;后面就是怎么计算体积了<br>&emsp;&emsp;毕竟总不能去计算每一个面<br>&emsp;&emsp;这里我想起了voronoi的时候的isoOffset节点<br>&emsp;&emsp;通过那个节点可以将模型转成雾<br>&emsp;&emsp;如此一来就可以计算体积了<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/4.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/4.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;但是这样输出没有模型<br>&emsp;&emsp;过滤就没办法操作<br>&emsp;&emsp;于是我想到使用attribute transfer将体积属性传递给原模型<br>&emsp;&emsp;最后再用delete节点对模型进行过滤，就可以找到box模型中有问题的部分。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/5.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/5.png" title="Houdini measure节点"></a></p></blockquote><h2 id="总结"><a href="#总结" class="headerlink"></a>总结</h2><blockquote><p>&emsp;&emsp;其实很简单的操作，本来还想着用Maya Python实现的，想到Houdini Measure节点就懒得写了。<br>&emsp;&emsp;最后发现Houdini的坑也不少。<br>&emsp;&emsp;不过目前也攻克了。<br>&emsp;&emsp;后面我找了一下，发现Maya可以使用 <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?contextId=COMMANDS-INDEX" target="_blank" rel="noopener">computePolysetVolume</a> 命令计算体积<br>&emsp;&emsp;但是这个命令只能用MEL执行<br>&emsp;&emsp;于是又在网上查了一下，原来Python也可以执行MEL，那就不必担心。<a href="http://download.autodesk.com/us/maya/2009help/index.html?url=Using_Python_in_Maya_Communicating_between_Python_and_MEL.htm,topicNumber=d0e40141" target="_blank" rel="noopener">链接</a></p></blockquote><h2 id="2018-10-12-根据面数过滤模型"><a href="#2018-10-12-根据面数过滤模型" class="headerlink"></a>2018-10-12 根据面数过滤模型</h2><blockquote><p>&emsp;&emsp;关于寻找问题模型的方法，又有了新的思路<br>&emsp;&emsp;鉴于问题模型一般都是一个到两个面的面片，我可以计算片面数对模型进行过滤。<br>&emsp;&emsp;思路是很清晰的，但是我却被 connective 节点生成的class属性给难住了。<br>&emsp;&emsp;我是希望通过计算class数字相同的情况出现的次数，如果出现次数比较少，就进行过滤。<br>&emsp;&emsp;但是这个操作非常难以实现，最主要的原因在于 wrangle 节点<br>&emsp;&emsp;wrangle 中的primitive遍历会注意遍历每一个面片执行wrangle中的代码<br>&emsp;&emsp;这样根本就没有办法将相关的变量累加起来。<br>&emsp;&emsp;于是在这个死循环中写了很多无谓的代码进行测试。</p></blockquote><blockquote><p>&emsp;&emsp;最后我发现，用foreach节点可以有效地将所有的模型分离出来。<br>&emsp;&emsp;这样只要直接根据面数过滤相关的模型即可。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/6.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/6.png" title="Houdini measure节点"></a></p></blockquote>          </h1></div>      </div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;**&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  mari4扩展包帮助文档，&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？&lt;br&gt;  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了&lt;/p&gt;
 &lt;p&gt;**&lt;br&gt;
     
     </summary>
     
-      <category term="mair相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/mair%E7%9B%B8%E5%85%B3/"/>
+      <category term="HOUDINI相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/HOUDINI%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+      <category term="模型" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="流程问题" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B5%81%E7%A8%8B%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="houdini" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/houdini/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mari4.5扩展包帮助文档</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/</id>
+    <published>2019-08-13T15:05:18.704Z</published>
+    <updated>2019-08-16T15:37:44.725Z</updated>
+    
+    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   mari4.5扩展包帮助文档<br> <img width="933" height="235" alt="" style="padding : 1px;" src="lib/ReleaseNotes.jpg"></p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1500" width="1000" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;**&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;   mari4.5扩展包帮助文档&lt;br&gt;
+
+ &lt;img width=&quot;933&quot; height=&quot;235&quot; alt=&quot;&quot; style=&quot;padding : 1px;&quot; src=&quot;lib/ReleaseNotes.jpg&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+    
+    </summary>
+    
+      <category term="mari相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/mari%E7%9B%B8%E5%85%B3/"/>
     
     
       <category term="贴图" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E8%B4%B4%E5%9B%BE/"/>
     
-      <category term="mari" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari/"/>
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="mari扩展包" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari%E6%89%A9%E5%B1%95%E5%8C%85/"/>
+      <category term="mari4.5扩展包" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari4-5%E6%89%A9%E5%B1%95%E5%8C%85/"/>
     
-      <category term="mari帮助文档" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"/>
+      <category term="插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -199,9 +232,9 @@
       <category term="houdini相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/houdini%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="深度合成" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
-    
       <category term="houdini" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/houdini/"/>
+    
+      <category term="深度合成" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
     
   </entry>
   
@@ -225,9 +258,9 @@
       <category term="houdini相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/houdini%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="深度合成" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
-    
       <category term="houdini" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/houdini/"/>
+    
+      <category term="深度合成" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%90%88%E6%88%90/"/>
     
   </entry>
   
@@ -496,30 +529,6 @@
       <category term="python" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/python/"/>
     
       <category term="python基础" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/python%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于WorldMachine基础介绍</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/15/share/WorldMachine%E5%9F%BA%E7%A1%80/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/06/15/share/WorldMachine基础/</id>
-    <published>2019-06-15T15:02:16.949Z</published>
-    <updated>2019-06-15T16:01:19.753Z</updated>
-    
-    <content type="html"><![CDATA[<p>WorldMachine基础介绍<br><a id="more"></a><br><article class="article-content"><p>大家好，这里带来的是用<a href="" title="" target="_blank" data-original-title="关于WorldMachine的文章">WorldMachine</a>+制造出非常有装逼效果的地形，适合做一些daily render的小练习。</p><p>*这个教程非常初级，仅供参考。</p><p><a href="" title="" target="_blank" data-original-title="查看更多关于WorldMachine的文章">WorldMachine</a>是一款专业的三维山脉和地形生成软件，它可以生动模拟大自然的真实地形，并给您一个交互编辑的环境，让您快速又轻松地创建专业地形，创建完成以后，您可以将模型，贴图，高度图导出到您的三维软件或者游戏引<span id="pos_placeholder" style="width: 0px;height: 0px;margin: 0px;padding: 0px"></span>擎当中进一步使用。</p><p>由于我们是使用<a href="" title="" target="_blank" data-original-title="查看更多关于WorldMachine的文章">WorldMachine</a>与C4D进行结合，主要讲<a href="" title="" target="_blank" data-original-title="查看更多关于WorldMachine的文章">WorldMachine</a>与其他三维软件的结合中的一些常用工具，不会涉及到很多的关于真实地形的创建，更多的是讲一些关于艺术化、风格化的地形的创建。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007155882.png" title="" rel="external" data-original-title="（1）" target="_blank"><br><img title=" 1" alt=" 1" class="aligncenter size-full wp-image-3207" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007155882.png"></a></p><p><a href="https://www.btbat.com/tag/worldmachine" title="" target="_blank" data-original-title="查看更多关于WorldMachine的文章">WorldMachine</a>的工作流程依靠节点化的编辑，对基础的地形进行一些合成、修改的操作来达到自己想要的效果，如果对于Substance Designer，阿诺德这种用节点化编辑的比较熟悉的就可以很快的上手<a href="https://www.btbat.com/tag/worldmachine" title="" target="_blank" data-original-title="查">WorldMachine</a>。</p><p>接下来我们进入正题，开始用WorldMachine创造出一个属于你自己的地形。</p><p>首先，我们点击Generator（生成器）来创建一些基础的地形，这些基础的地形可以相互之间以上一个节点输出参数加上下一个节点的参数进行生成。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007400859.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 2" alt="学习使我快乐！ - 2" class="aligncenter size-full wp-image-3211 okmemo-dragging" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007400859.png"></a></p><p>这里我先创建了一个基础的Radial Grad，就是一个山丘的样子，再创建一个Advanced Perlin，将Radial Grad节点的输出与shaping guide相链接，相当于在平地上放置一座山峰。</p><p><a class="okmemo-tmp-unselect" href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007464568.png" rel="external" title="" data-original-title="）" target="_blank"><img title=" 3" alt=" - 3" class="aligncenter size-full wp-image-3213 okmemo-dragging" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007464568.png"></a><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007464527.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 4" alt="学习使我快乐！ - 4" class="aligncenter size-full wp-image-3212" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007464527.png"></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/201712200746461.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 5" alt="学习使我快乐！ - 5" class="aligncenter size-full wp-image-3214" src="http://img0.btbat.com/wp-content/uploads/2017/12/201712200746461.png"></a></p><p>我们可以点击当前节点并点击lock preview锁定当前节点的预览，可以双击节点点开更加详细的参数的控制，在advanced perlin节点里，scale控制山体的形态，style控制山体梯度模式，octaves控制山体梯度等级。在radial grad节点里，radius控制突起的范围，type控制山体种类，生成器类的参数基本都类似，具体参数就不做过多讲解了，可以自行调整看看效果。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007504530.png" rel="external" class="fancybox" title="" data-original-title="）" target="_blank"><img title="学习使我快乐！ - 6" alt="学习使我快乐！ - 6" class="aligncenter size-full wp-image-3217" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007504530.png"></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/201712200750114.png" rel="external" class="fancybox" title="" data-original-title="）" target="_blank"><img title="学习使我快乐！ - 7" alt="学习使我快乐！ - 7" class="aligncenter size-full wp-image-3216" src="http://img0.btbat.com/wp-content/uploads/2017/12/201712200750114.png"></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007501053.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 8" alt="地形！学习使我快乐！ - 8" class="aligncenter size-full wp-image-3215" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122007501053.png"></a></p><p>接下来我们创建一个voroni节点，并调整voroni节点的scale，将其缩小，产生更多的细节。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008013461.png" title="" rel="external" data-original-title="1）" target="_blank"><br></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008042199.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 9" alt="学习使我快乐！ - 9" class="aligncenter size-full wp-image-3220" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008042199.png"></a></p><p>我们在combiner选项里面创建一个combiner节点，将advanced perlin节点和voroni节点进行混合，调整combiner节点的method方法改成add，将两个节点进行添加模式。</p><p>&nbsp;</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008075137.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 10" alt="学习使我快乐！ - 10" class="aligncenter size-full wp-image-3221" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008075137.png"></a></p><p>接下来在nature节点里添加erosion（侵蚀，风化）节点将erosion节点的duration（持续时间）rock hardness （石化程度）sediment carrya mount（泥沙沉积量）进行调整，并可以点击上方绿色按钮进行地形的生成运算，点击上方绿色按钮左侧3D view可以进行3D的预览。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008233013.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 11" alt="学习使我快乐！ - 11" class="aligncenter size-full wp-image-3224" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008233013.png"></a></p><p>接下来，我们复制一层erosion节点，将两个erosion节点连在一起，减少rock hardness、提高sediment carry amount，提高duration，再次进行计算，提高地面平滑，增加山峰细节。<a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008304584.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 12" alt="学习使我快乐！ - 12" class="aligncenter size-full wp-image-3229" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008304584.png"></a></p><p>我们可以点击3D view上面的A|B进行计算前后的效果预览。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008340027.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 13" alt="学习使我快乐！ - 13" class="aligncenter size-full wp-image-3230" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008340027.png"></a></p><p>目前基础地形的创建就到此完毕，用基础的几个节点创建了一个山峰的地形，是不是很简单呢~</p><p>那么我们开始进行上色吧~</p><p>在selector（选择器）创建一个slope(斜率）节点，将erosion的primary输出到slope节点将erosion的wear map（磨损）输出到slope的mask，调整阈值，可以输出成山脉的树叶纹理。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008443330.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 14" alt="学习使我快乐！ - 14" class="aligncenter size-full wp-image-3234 okmemo-dragging" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008443330.png"></a><a href="http://img0.btbat.com/wp-content/uploads/2017/12/201712200844302.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 15" alt="学习使我快乐！ - 15" class="aligncenter size-full wp-image-3233" src="http://img0.btbat.com/wp-content/uploads/2017/12/201712200844302.png"></a></p><p>接下来我们在macros（宏）点击左边的打开，找到basic coverage，这个是系统预设好的上色的宏命令，或者也可以用converter里的colorizer节点，但是不推荐，这样就生成了山脉树叶纹理的颜色了，或者也可以吧erosion直接连到basic coverage，可以出来不同的效果，看个人喜好。可以改变rock和erosion的颜色，来出来不同的效果。上色部分就就基本上完成了。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008500641.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 16" alt="学习使我快乐！ - 16" class="aligncenter size-full wp-image-3236" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122008500641.png"></a></p><p>接下来就是导出部分。</p><p>在output里面依次创建mesh output、height output、bitmap output，再在converter里面创建normal-map maker并创建一个bitmap output。</p><p>将erosion连接到height output &nbsp;输出黑白的置换图，输出到meshkey输出obj格式的mesh模型，还可以新建一个overlay view去预览最后的成品，将basic coverage连接到overlay的颜色通道 erosion连接到overlay就可以看到自己做的成品啦，当然之前要先build一下。</p><p>normal-map maker+bitmap可以输出基于地形的法线贴图。</p><p>然后basic coverage+bitmap就是输出颜色贴图了~~</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009004320.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 17" alt="学习使我快乐！ - 17" class="aligncenter size-full wp-image-3238" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009004320.png"></a></p><p>然后设置一下目录~然后就可以准备输出了。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180681.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 18" alt="学习使我快乐！ - 18" class="aligncenter size-full wp-image-3244" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180681.png"></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180738.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 19" alt="学习使我快乐！ - 19" class="aligncenter size-full wp-image-3245" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180738.png"></a> <a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180736.png" rel="external" class="fancybox" title="" data-original-title="）" target="_blank"><img title="学习使我快乐！ - 20" alt="学习使我快乐！ - 20" class="aligncenter size-full wp-image-3246" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009180736.png"></a></p><p>点击上面的world extents，可以修改地形的总体大小与容差高度，主要的是右边的是resolution控制输出的地形和贴图的精度，当然越大效果越精细，但是生成的时间就越长。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009205191.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 21" alt="学习使我快乐！ - 21" class="aligncenter size-full wp-image-3247" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009205191.png"></a></p><p>一切设置完毕之后就可以点击build，然后静待生成，点击export即可导出到设置的文件夹了。</p><p><a href="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009241691.png" rel="external" class="fancybox" title="" data-original-title="" target="_blank"><img title="学习使我快乐！ - 22" alt="学习使我快乐！ - 22" class="aligncenter size-full wp-image-3249" src="http://img0.btbat.com/wp-content/uploads/2017/12/2017122009241691.png"></a></p><p>~~简单的流程就这样~十分基础的教学，下次我会讲一下怎么贴材质到地形。</p><p>补一张2K的完成图。</p>         </article></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;WorldMachine基础介绍&lt;br&gt;
-    
-    </summary>
-    
-      <category term="WorldMachine" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/WorldMachine/"/>
-    
-    
-      <category term="WorldMachine" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/WorldMachine/"/>
-    
-      <category term="基础" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   

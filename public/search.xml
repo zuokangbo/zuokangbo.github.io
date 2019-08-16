@@ -4,16 +4,47 @@
   
     
     <entry>
-      <title>mari4.5扩展包帮助文档</title>
-      <link href="/2019/08/13/share/mari_help/"/>
-      <url>/2019/08/13/share/mari_help/</url>
+      <title> Houdini - 计算模型体积 过滤问题模型</title>
+      <link href="/2019/08/16/share/houdini_help/"/>
+      <url>/2019/08/16/share/houdini_help/</url>
       
-        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  mari4扩展包帮助文档，</p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1000" width="1500" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？<br>  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了</p><p>**<br><a id="more"></a><br><div class="article-inner">          <input type="hidden" class="isFancy">              <header class="article-header">              <h1 class="article-title" itemprop="name">      Houdini - 计算模型体积 过滤问题模型    </h1>        </header>                    <div class="article-entry" itemprop="articleBody">                        <h1 id="批量遍历模型-过滤体积小的部分"><a href="#批量遍历模型-过滤体积小的部分" class="headerlink"></a>批量遍历模型 过滤体积小的部分<h2 id="measure节点"><a href="#measure节点" class="headerlink"></a>measure节点</h2><blockquote><p>&emsp;&emsp;然而事情并没有我想象的那么顺利。<br>&emsp;&emsp;我们这边的模型是一堆box<br>&emsp;&emsp;如果直接连接measure节点，会根据模型上的每个面进行体积计算<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;我需要的是对单个模型进行计算。<br>&emsp;&emsp;然而如此循环遍历单个模型呢？<br>&emsp;&emsp;我最开始是想用类似破碎的方案，直接加入assemble节点打包，<br>&emsp;&emsp;循环遍历所有的物体。<br>&emsp;&emsp;然而这样根本就计算不出体积。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/2.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/2.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;因此我想到所有的box都丢进循环中<br>&emsp;&emsp;最开始也不知道怎么操作，测试了一下就是弄好出来了<br>&emsp;&emsp;添加connective节点将所有的模型面编号统一输出一个class属性，Houdini 16.5 的foreach节点自带相关操作了。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/3.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/3.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;后面就是怎么计算体积了<br>&emsp;&emsp;毕竟总不能去计算每一个面<br>&emsp;&emsp;这里我想起了voronoi的时候的isoOffset节点<br>&emsp;&emsp;通过那个节点可以将模型转成雾<br>&emsp;&emsp;如此一来就可以计算体积了<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/4.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/4.png" title="Houdini measure节点"></a></p></blockquote><blockquote><p>&emsp;&emsp;但是这样输出没有模型<br>&emsp;&emsp;过滤就没办法操作<br>&emsp;&emsp;于是我想到使用attribute transfer将体积属性传递给原模型<br>&emsp;&emsp;最后再用delete节点对模型进行过滤，就可以找到box模型中有问题的部分。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/5.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/5.png" title="Houdini measure节点"></a></p></blockquote><h2 id="总结"><a href="#总结" class="headerlink"></a>总结</h2><blockquote><p>&emsp;&emsp;其实很简单的操作，本来还想着用Maya Python实现的，想到Houdini Measure节点就懒得写了。<br>&emsp;&emsp;最后发现Houdini的坑也不少。<br>&emsp;&emsp;不过目前也攻克了。<br>&emsp;&emsp;后面我找了一下，发现Maya可以使用 <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?contextId=COMMANDS-INDEX" target="_blank" rel="noopener">computePolysetVolume</a> 命令计算体积<br>&emsp;&emsp;但是这个命令只能用MEL执行<br>&emsp;&emsp;于是又在网上查了一下，原来Python也可以执行MEL，那就不必担心。<a href="http://download.autodesk.com/us/maya/2009help/index.html?url=Using_Python_in_Maya_Communicating_between_Python_and_MEL.htm,topicNumber=d0e40141" target="_blank" rel="noopener">链接</a></p></blockquote><h2 id="2018-10-12-根据面数过滤模型"><a href="#2018-10-12-根据面数过滤模型" class="headerlink"></a>2018-10-12 根据面数过滤模型</h2><blockquote><p>&emsp;&emsp;关于寻找问题模型的方法，又有了新的思路<br>&emsp;&emsp;鉴于问题模型一般都是一个到两个面的面片，我可以计算片面数对模型进行过滤。<br>&emsp;&emsp;思路是很清晰的，但是我却被 connective 节点生成的class属性给难住了。<br>&emsp;&emsp;我是希望通过计算class数字相同的情况出现的次数，如果出现次数比较少，就进行过滤。<br>&emsp;&emsp;但是这个操作非常难以实现，最主要的原因在于 wrangle 节点<br>&emsp;&emsp;wrangle 中的primitive遍历会注意遍历每一个面片执行wrangle中的代码<br>&emsp;&emsp;这样根本就没有办法将相关的变量累加起来。<br>&emsp;&emsp;于是在这个死循环中写了很多无谓的代码进行测试。</p></blockquote><blockquote><p>&emsp;&emsp;最后我发现，用foreach节点可以有效地将所有的模型分离出来。<br>&emsp;&emsp;这样只要直接根据面数过滤相关的模型即可。<br><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/6.png" title="Houdini measure节点" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/6.png" title="Houdini measure节点"></a></p></blockquote>          </h1></div>      </div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
       
       
       <categories>
           
-          <category> mair相关 </category>
+          <category> HOUDINI相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+            <tag> 模型 </tag>
+            
+            <tag> 流程问题 </tag>
+            
+            <tag> houdini </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mari4.5扩展包帮助文档</title>
+      <link href="/2019/08/13/share/mari_help/"/>
+      <url>/2019/08/13/share/mari_help/</url>
+      
+        <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   mari4.5扩展包帮助文档<br> <img width="933" height="235" alt="" style="padding : 1px;" src="lib/ReleaseNotes.jpg"></p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1500" width="1000" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mari相关 </category>
           
       </categories>
       
@@ -22,11 +53,11 @@
             
             <tag> 贴图 </tag>
             
-            <tag> mari </tag>
+            <tag> 分享 </tag>
             
-            <tag> mari扩展包 </tag>
+            <tag> mari4.5扩展包 </tag>
             
-            <tag> mari帮助文档 </tag>
+            <tag> 插件 </tag>
             
         </tags>
       
@@ -190,9 +221,9 @@
       
         <tags>
             
-            <tag> 深度合成 </tag>
-            
             <tag> houdini </tag>
+            
+            <tag> 深度合成 </tag>
             
         </tags>
       
@@ -217,9 +248,9 @@
       
         <tags>
             
-            <tag> 深度合成 </tag>
-            
             <tag> houdini </tag>
+            
+            <tag> 深度合成 </tag>
             
         </tags>
       
@@ -948,28 +979,6 @@
     
     
     <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
-      
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -986,6 +995,28 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
+      
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
