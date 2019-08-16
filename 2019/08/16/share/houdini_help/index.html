@@ -5,24 +5,25 @@
   
   <title> Houdini - 计算模型体积 过滤问题模型 | 个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="** 前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
+  <meta name="description" content="**      前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
 <meta name="keywords" content="分享,模型,流程问题,houdini">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" Houdini - 计算模型体积 过滤问题模型">
 <meta property="og:url" content="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/16/share/houdini_help/index.html">
 <meta property="og:site_name" content="个人主页">
-<meta property="og:description" content="** 前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
+<meta property="og:description" content="**      前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
+<meta property="og:image" content="https://blog.yfblog.xyz/img/wen1.jpg">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/2.png">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/3.png">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/4.png">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/5.png">
 <meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/6.png">
-<meta property="og:updated_time" content="2019-08-16T15:30:54.798Z">
+<meta property="og:updated_time" content="2019-08-16T15:53:15.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Houdini - 计算模型体积 过滤问题模型">
-<meta name="twitter:description" content="** 前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
-<meta name="twitter:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/CG/Houdini/Houdini-volume/1.png">
+<meta name="twitter:description" content="**      前言   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了 **">
+<meta name="twitter:image" content="https://blog.yfblog.xyz/img/wen1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="个人主页" type="application/atom+xml">
   
@@ -119,6 +120,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>**</p>
+
+
+ <img width="1233" height="235" alt="" style="padding : 1px;" src="https://blog.yfblog.xyz/img/wen1.jpg">
+
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   例如在盒子模型中，并不是全部都是盒子，有部分只是面片，如何检测出这些多余的部分呢？<br>  我想了一下，想起了Houdini的measure节点，直接计算模型体积进行过滤就OK了</p>
 <p>**<br><a id="more"></a><br>
 <div class="article-inner">
@@ -161,7 +166,7 @@
 <h2 id="总结"><a href="#总结" class="headerlink"></a>总结</h2><blockquote>
 <p>&emsp;&emsp;其实很简单的操作，本来还想着用Maya Python实现的，想到Houdini Measure节点就懒得写了。<br>&emsp;&emsp;最后发现Houdini的坑也不少。<br>&emsp;&emsp;不过目前也攻克了。<br>&emsp;&emsp;后面我找了一下，发现Maya可以使用 <a href="http://help.autodesk.com/view/MAYAUL/2018/ENU/?contextId=COMMANDS-INDEX" target="_blank" rel="noopener">computePolysetVolume</a> 命令计算体积<br>&emsp;&emsp;但是这个命令只能用MEL执行<br>&emsp;&emsp;于是又在网上查了一下，原来Python也可以执行MEL，那就不必担心。<a href="http://download.autodesk.com/us/maya/2009help/index.html?url=Using_Python_in_Maya_Communicating_between_Python_and_MEL.htm,topicNumber=d0e40141" target="_blank" rel="noopener">链接</a></p>
 </blockquote>
-<h2 id="2018-10-12-根据面数过滤模型"><a href="#2018-10-12-根据面数过滤模型" class="headerlink"></a>2018-10-12 根据面数过滤模型</h2><blockquote>
+<h2 id="2018-10-12-根据面数过滤模型"><a href="#2018-10-12-根据面数过滤模型" class="headerlink"></a>根据面数过滤模型</h2><blockquote>
 <p>&emsp;&emsp;关于寻找问题模型的方法，又有了新的思路<br>&emsp;&emsp;鉴于问题模型一般都是一个到两个面的面片，我可以计算片面数对模型进行过滤。<br>&emsp;&emsp;思路是很清晰的，但是我却被 connective 节点生成的class属性给难住了。<br>&emsp;&emsp;我是希望通过计算class数字相同的情况出现的次数，如果出现次数比较少，就进行过滤。<br>&emsp;&emsp;但是这个操作非常难以实现，最主要的原因在于 wrangle 节点<br>&emsp;&emsp;wrangle 中的primitive遍历会注意遍历每一个面片执行wrangle中的代码<br>&emsp;&emsp;这样根本就没有办法将相关的变量累加起来。<br>&emsp;&emsp;于是在这个死循环中写了很多无谓的代码进行测试。</p>
 </blockquote>
 <blockquote>
@@ -198,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/16/share/houdini_help/" data-id="cjzea83ou001mhgsdo51sk04j" class="article-share-link">Share</a>
+      <a data-url="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/16/share/houdini_help/" data-id="cjzealbzw001m4csd6jpbg82p" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/houdini/">houdini</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分享/">分享</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/流程问题/">流程问题</a></li></ul>
@@ -211,7 +216,7 @@
   
   
     <a href="/2019/08/13/share/mari_help/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">mari4.5扩展包帮助文档</div>
     </a>
   
