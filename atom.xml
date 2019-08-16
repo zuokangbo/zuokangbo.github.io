@@ -51,9 +51,9 @@
     <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/"/>
     <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/13/share/mari_help/</id>
     <published>2019-08-13T15:05:18.704Z</published>
-    <updated>2019-08-16T15:37:44.725Z</updated>
+    <updated>2019-08-16T15:40:39.557Z</updated>
     
-    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   mari4.5扩展包帮助文档<br> <img width="933" height="235" alt="" style="padding : 1px;" src="lib/ReleaseNotes.jpg"></p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1500" width="1000" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>   mari4.5扩展包帮助文档<br> <img width="933" height="235" alt="" style="padding : 1px;" src="lib/ReleaseNotes.jpg"></p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="https://zkbxej.coding.me/mari_file/MARI%20Extension%20Pack.html?index.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="https://zkbxej.coding.me/mari_file/index.html" height="1500" width="1200" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
     
     <summary type="html">
     
@@ -127,11 +127,11 @@
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/%E5%8A%A8%E7%94%BB/"/>
     
     
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
     
       <category term="小知识" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    
-      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
