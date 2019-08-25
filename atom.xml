@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/zuokangbo/zuokangbo.github.io/"/>
-  <updated>2019-08-22T15:19:33.076Z</updated>
+  <updated>2019-08-25T07:35:28.069Z</updated>
   <id>https://github.com/zuokangbo/zuokangbo.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gaea中文帮助文档</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/25/share/gaea_help/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/25/share/gaea_help/</id>
+    <published>2019-08-25T07:33:19.230Z</published>
+    <updated>2019-08-25T07:35:28.069Z</updated>
+    
+    <content type="html"><![CDATA[<p>**<br> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/25/br3hgyINYsd7oSV.png"></p><p>**<br><a id="more"></a><br><div id="tab_1"><a href="http://zkbxej.coding.me/gaea_help/html_documentation/Fault.html" target="_blank" rel="external"><h1>点击全屏观看完整版</h1></a>    <iframe src="http://zkbxej.coding.me/gaea_help/html_documentation/Constant.html" height="1500" width="1300" frameborder="1" scrolling="1"></iframe></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;**&lt;br&gt;
+
+ &lt;img width=&quot;933&quot; height=&quot;235&quot; alt=&quot;&quot; style=&quot;padding : 1px;&quot; src=&quot;https://i.loli.net/2019/08/25/br3hgyINYsd7oSV.png&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;**&lt;br&gt;
+    
+    </summary>
+    
+      <category term="gaea相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/gaea%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="gaea" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/gaea/"/>
+    
+      <category term="地形" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%9C%B0%E5%BD%A2/"/>
+    
+      <category term="插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>适用于3Ds Max的交互式工具</title>
@@ -39,9 +71,9 @@
       <category term="3dsmax相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/3dsmax%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="3dsmax" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/3dsmax/"/>
     
@@ -139,11 +171,11 @@
     
       <category term="贴图" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E8%B4%B4%E5%9B%BE/"/>
     
+      <category term="插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
       <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="mari4.5扩展包" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari4-5%E6%89%A9%E5%B1%95%E5%8C%85/"/>
-    
-      <category term="插件" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
@@ -516,30 +548,6 @@
     <summary type="html">
     
       &lt;p&gt;Photogrammetry拍摄的基础&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Photogrammetry" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/Photogrammetry/"/>
-    
-    
-      <category term="Photogrammetry" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/Photogrammetry/"/>
-    
-      <category term="扫描" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%89%AB%E6%8F%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Photogrammetry-学习(1)</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/30/share/photogrmmt(1)/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/06/30/share/photogrmmt(1)/</id>
-    <published>2019-06-30T05:58:32.907Z</published>
-    <updated>2019-06-30T06:06:47.483Z</updated>
-    
-    <content type="html"><![CDATA[<p>Photogrammetry基础介绍<br><a id="more"></a><br><div class="article-entry" itemprop="articleBody">                        <h1 id="Photogrammetry-入坑前言"><a href="#Photogrammetry-入坑前言" class="headerlink"></a><center>Photogrammetry 入坑前言</center></h1><a id="more"></a><p>&emsp;&emsp;最近研究照片扫描技术，并且推荐了一款软件<strong>3DF Zephyr</strong>，但是这款软件的教程太少了，经过我的调查，我发现Agisoft Photoscan是目前比较成熟的软件，就这样我就进了Photogrammetry的大坑。</p><p>&emsp;&emsp; Photogrammetry是什么呢？正如上面的软件介绍一样，它是一种通过一系列的照片还原三维模型的技术。</p><hr><p>&emsp;&emsp; 那Photogrammetry有什么优点，对比目前市场上的其他扫描技术又有什么优势和劣势呢？</p><blockquote><p>Photogrammetry的优点</p><ul><li>通过照片生成模型和纹理，细节丰富到令人发指，模型细腻</li><li>生成速度快，操作相对简单</li><li>制作成本低，甚至可以用手机拍照完成流程</li><li>支持扫描大型物体，甚至是航拍地图</li></ul></blockquote><blockquote><p>Photogrammetry的缺点</p><ul><li>无法处理颜色大规模统一的物体（<strong>影响图片识别</strong>）</li><li>无法处理随着角度变化的强烈高光（<strong>影响图片识别</strong>）</li><li>无法处理透明材质（<strong>影响图片识别</strong>）</li><li>无法处理多重相似的图案（<strong>影响图片识别</strong>）</li><li>细小的物体难以生成高质量的模型</li><li>不均匀的光线分布会影响扫描的效果</li><li>拍摄多角度扫描素材比较繁琐</li></ul></blockquote><blockquote><p>Photogrammetry与激光扫描的技术对比</p><ul><li>激光扫描的模型精度与Photogrammetry不相上下</li><li>激光扫描可以解决Photogrammetry因为图片识别而无法扫描的硬伤</li><li>高规格的激光扫描方可识别颜色，成本很高</li><li>激光扫描难以胜任大型物体扫描，特别是航拍</li></ul></blockquote><hr><h1 id="软件下载"><a href="#软件下载" class="headerlink"></a>软件下载</h1><p><strong>3DF Zephyr</strong></p><p>链接: <a href="https://pan.baidu.com/s/1Rz66Ui1VNWtKZeVh55scmg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Rz66Ui1VNWtKZeVh55scmg</a> 密码: xnwn</p><p><strong>Agisoft Photoscan</strong></p><p>链接: <a href="https://pan.baidu.com/s/1eZlWmDIxRNGhM0ZVnpWAQQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1eZlWmDIxRNGhM0ZVnpWAQQ</a> 密码: g3ne</p><hr><h1 id="Photogrammetry软件操作前期基本流程"><a href="#Photogrammetry软件操作前期基本流程" class="headerlink"></a>Photogrammetry软件操作前期基本流程</h1><h2 id="软件安装"><a href="#软件安装" class="headerlink"></a><strong>软件安装</strong></h2><blockquote><p>打开软件安装包，直接安装。然后将破解文件覆盖快捷方式的启动程序。</p></blockquote><h3 id="启动程序即可看到软件界面"><a href="#启动程序即可看到软件界面" class="headerlink"></a>启动程序即可看到软件界面</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png" title="操作截图"></a></p><h3 id="正式使用之前务必先打开首选项"><a href="#正式使用之前务必先打开首选项" class="headerlink"></a>正式使用之前务必先打开首选项</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/2.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/2.png" title="操作截图"></a></p><h3 id="首选项这里可以修改语言模式"><a href="#首选项这里可以修改语言模式" class="headerlink"></a>首选项这里可以修改语言模式</h3><blockquote><p>不习惯英语的可以修改为中文，在下还是依然使用英文。</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/3.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/3.png" title="操作截图"></a></p><h3 id="另外去到GPU的标签-务必开启CUDA显卡加速"><a href="#另外去到GPU的标签-务必开启CUDA显卡加速" class="headerlink"></a>另外去到GPU的标签 务必开启CUDA显卡加速</h3><blockquote><p>开启之后你就能体验飞一样的感觉（GPU运算速度是CPU的好几倍）<br></p></blockquote><blockquote><p>原谅我的垃圾手提电脑，N卡940M太低端无法识别</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/4.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/4.png" title="操作截图"></a></p><hr><h1 id="基本流程"><a href="#基本流程" class="headerlink"></a><strong>基本流程</strong></h1><h2 id="点击打开workflow"><a href="#点击打开workflow" class="headerlink"></a><strong>点击打开workflow</strong></h2><blockquote><p>截图上的操作就是Photogrammetry的基本流程<br></p></blockquote><blockquote><p>我们需要一步一步去完成操作<br></p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/5.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/5.png" title="操作截图"></a></p><h2 id="Align-Photos-对齐照片"><a href="#Align-Photos-对齐照片" class="headerlink"></a><strong>Align Photos (对齐照片)</strong></h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/6.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/6.png" title="操作截图"></a></p><blockquote><p>这里有几个参数需要注意</p><ul><li>Acurray（识别精度） —— 不建议太高，太高会很慢。我一般选择Medium</li><li>Generic Preselection（常用预选） —— 对图片序列识别进行优化，通常都勾选</li><li>Key Point Limit（关键点上限）—— 建议为0，就是不设上限</li><li>Tie Point Limit（点云上限） —— 同样建议为0，就是不设上限</li><li>Adapt Camera model fitting（适应摄像机的位置）—— 一般都要勾选，特别是应用蒙版的情况</li></ul></blockquote><blockquote><p>设置完成即可运行操作</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/7.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/7.png" title="操作截图"></a></p><blockquote><p>识别完成之后会生成sparse cloud（稀疏点云）<br></p></blockquote><blockquote><p>比较成功的识别结果（图片识别规整)</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/8.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/8.png" title="操作截图"></a></p><blockquote><p>比较失败的识别结果（图片错位)</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/9.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/9.png" title="操作截图"></a></p><blockquote><p>图片错位的原因</p><ul><li>Align Photos 的识别精度太低了或太高了</li><li>照片存在模糊、距离不一、角度偏移等问题</li><li>物体上存在Photogrammetry无法解决的硬伤</li></ul></blockquote><h2 id="Build-Dense-Cloud-（生成密集点云）"><a href="#Build-Dense-Cloud-（生成密集点云）" class="headerlink"></a><strong>Build Dense Cloud （生成密集点云）</strong></h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/10.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/10.png" title="操作截图"></a></p><blockquote><p>参数说明</p><ul><li>Quality（质量） —— 不建议太高，太高会很慢。我一般选择Medium</li><li>Depth filtering（深度过滤） —— 一般为Aggressive或者默认参数</li><li>Calculate point colors（计算顶点颜色） —— 这个务必要勾选，否则生成模型没有颜色</li></ul></blockquote><blockquote><p>只要一开始的 sparse cloud 没有太大问题，那么密集点云的步骤也比较顺利<br>这个步骤需要比较长的运算时间</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/11.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/11.png" title="操作截图"></a></p><blockquote><p>在生成的过程中软件会生成Depth Map来重新构建照片的深度，从而奠定立体生成的基础（这个需要中断生成步骤才可以看到）</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/13.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/13.png" title="操作截图"></a></p><blockquote><p>根据流程生成完毕是这样子的（这个效果是建立在Sparse Cloud的基础上的）</p></blockquote><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/12.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/12.png" title="操作截图"></a></p><hr><h1 id="总结"><a href="#总结" class="headerlink"></a>总结</h1><blockquote><p>Photogrammetry软件操作前期流程</p><ul><li>通过照片生成稀疏点云</li><li>通过稀疏点云计算Depth Map，生成密集点云</li></ul></blockquote>          </div>  </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Photogrammetry基础介绍&lt;br&gt;
     
     </summary>
     
