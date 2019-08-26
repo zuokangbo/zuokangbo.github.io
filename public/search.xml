@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>clarisse系列-约束工具的使用方法</title>
+      <link href="/2019/08/26/share/clarisse_xili2/"/>
+      <url>/2019/08/26/share/clarisse_xili2/</url>
+      
+        <content type="html"><![CDATA[<div style="text-align:center;"> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/26/voZPbNL4FRDlmkK.jpg"></div><a id="more"></a><p>  <br></p><p style="text-align:center;font-size:14px;">  <strong><span style="font-size:24px;color:#E53333;">clarisse2：约束工具的使用方法</span></strong><strong><span style="font-size:24px;color:#E53333;"></span></strong> </p><p style="text-align:center;font-size:14px;">  <br></p><p style="font-size:14px;">  <br></p><p style="text-align:center;font-size:14px;">  <span style="color:#60D978;">在clarisse中，使用约束工具大概有两种方法，</span> </p><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">第一种是在对象的kinematics（动态）属性中的parent去链接对象，</span> </div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">而这种方式就是普通的父子链接。（注意关系是被添加是父对象。）</span> </div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">大体关系，如下图：</span> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/XJ21fQWIDKAYcol.jpg" style="width:620px;" width="620" height="273" title="" align=""> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">要注意的是父对象的变换属性：最好是默认状态，不要有缩放之类的，（可以把父对象加一个combiner）</span> </div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">这样约束后，子对象就不会发生一些从父对象继承过来的错误的缩放</span> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">第二种：用constraints的方式，这里有多种类型的 选择，</span> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/vIeowMl25UWy8ru.png" style="width:220px;" width="220" height="211" title="" align=""> </div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">在这里能添加多种约束，或者批量添加，利用search批量选择去添加父对象。</span> </div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/AcFkfniaIDuBKy4.png" style="width:537px;" width="537" height="333" title="" align=""> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">具体步骤是：选中所有的子对象。</span> </div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/KulyDvqOAXgkHN2.png" style="width:559px;" width="559" height="79" title="" align=""> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/wpb612OmEPW5kLS.png" style="width:208px;" width="208" height="89" title="" align=""> </div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">在这里添加父对象的节点命令。</span> </div><div style="text-align:center;font-size:14px;">  <br></div><div style="text-align:center;font-size:14px;">  <span style="color:#60D978;">然后在search面板中搜索，parent这个父对象的链接节点。全选指定父对象。</span> </div><div style="text-align:center;">  <img alt="" src="https://i.loli.net/2019/08/26/RsmJWSTgw14EVDY.png" style="width:620px;" width="620" height="383" title="" align=""> </div><div style="font-size:14px;">  <br></div><p>  <br></p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> clarisse相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渲染 </tag>
+            
+            <tag> clarisse </tag>
+            
+            <tag> 材质 </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>clarisse系列-图章工具的使用</title>
       <link href="/2019/08/25/share/clarisse_xili1/"/>
       <url>/2019/08/25/share/clarisse_xili1/</url>
@@ -1112,22 +1143,22 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title></title>
+      <link href="/photos/ins.css"/>
+      <url>/photos/ins.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
-      <link href="/photos/ins.css"/>
-      <url>/photos/ins.css</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[#post-instagram{padding: 30px;}#post-instagram .article-entry{padding-right: 0;}.instagram{position: relative;min-height: 500px;}.instagram img {width: 100%;}.instagram .year {font-size: 16px;}.instagram .open-ins{padding: 10px 0;color: #cdcdcd;}.instagram .open-ins:hover{color: #657b83;}.instagram .year{display: inline;}.instagram .thumb {width: 25%;height: 0;padding-bottom: 25%;position: relative;display: inline-block;text-align: center;background: #ededed;outline: 1px solid #ddd;}.instagram .thumb a {position: relative;}.instagram .album h1 em{font-style: normal;font-size: 14px;margin-left: 10px;}.instagram .album ul{display: flex;flex-wrap: wrap;clear: both;width: 100%;text-align: left;}.instagram .album li{list-style: none;display: inline-block;box-sizing: border-box;padding: 0 5px;margin-bottom: -10px;height: 0;width: 25%;position: relative;padding-bottom: 25%;}.instagram .album li:before{display: none;}.instagram .album div.img-box{position: absolute;width: 90%;height: 90%;-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);box-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 1px 0 1px rgba(255,255,255,0.1);}.instagram .album div.img-box img{width: 100%;height: 100%;    position: absolute;    z-index: 2;}.instagram .album div.img-box .img-bg{position: absolute;top: 0;left: 0;bottom: 0px;width: 100%;margin: -5px;padding: 5px;-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-moz-box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 5px rgba(0,0,0,0.1);-webkit-transition: all 0.15s ease-out 0.1s;-moz-transition: all 0.15s ease-out 0.1s;-o-transition: all 0.15s ease-out 0.1s;transition: all 0.15s ease-out 0.1s;opacity: 0.2;cursor: pointer;display: block;z-index: 3;}.instagram .album div.img-box .icon {    font-size: 14px;    position: absolute;    left: 50%;    top: 50%;    margin-left: -7px;    margin-top: -7px;    color: #999;    z-index: 1;}.instagram .album div.img-box .img-bg:hover{opacity: 0;}.photos-btn-wrap {border-bottom: 1px solid #e5e5e5;margin-bottom: 20px;}.photos-btn {font-size: 16px;color: #333;margin-bottom: -4px;padding: 5px 8px 3px;}.photos-btn.active {color: #08c;border: 1px solid #e5e5e5;border-bottom: 5px solid #fff;}@media screen and (max-width:600px) {.instagram .thumb {width: 50%;padding-bottom: 50%;}.instagram .album li {width: 100%;position: relative;padding-bottom: 100%;text-align: center;}.instagram .album div.img-box{margin: 0;width: 90%;height: 90%;}}]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
