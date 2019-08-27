@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>clarisse系列-中置换的使用</title>
+      <link href="/2019/08/27/share/clarisse_xili3/"/>
+      <url>/2019/08/27/share/clarisse_xili3/</url>
+      
+        <content type="html"><![CDATA[<div style="text-align:center;"> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/27/6puIb2tWYasTv3m.jpg"></div><a id="more"></a><p><br></p><p style="text-align:center;font-size:14px;"><span style="font-size:24px;color:#E53333;">clarisse.中置换的使用</span><span style="font-size:24px;color:#E53333;"></span> </p><p style="text-align:center;font-size:14px;"><br></p><p style="text-align:center;font-size:14px;"><br></p><p style="text-align:center;font-size:14px;"><span style="color:#60D978;">在clarisse中，置换实现的方式有两种，一种是用变形器，另外是用着色器的方式。</span> </p><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">比较快速的方式是用变形器的方法：具体操作：</span> </div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/qQPAGDCcIfYJZu3.png" style="width:602px;" width="602" height="246" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">导入模型和贴图，</span> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">导入的贴图要注意，在 process中，把use raw data勾上，包括法线贴图之类的，必须要用线性空间。</span> </div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/VXma8Rtd4Lwh9Kq.png" style="width:342px;" width="342" height="126" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">如果是灰度图，</span> </div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/ZyahuIrwX2G3cQJ.png" style="width:360px;" width="360" height="105" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">把single channel file behavior （单通道文件行为）中的模式改成强制亮度。</span> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">让贴图以灰度图的方式输出。</span> </div><div style="text-align:center;font-size:14px;"><span style="font-size:22px;font-weight:bold;color:#60D978;">模型方面的设置。</span> </div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/IdJVXw1M4Oz58Lt.png" style="width:315px;" width="315" height="112" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">在deformation中加入置换节点。然后在贴图中选择置换贴图。</span> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">以上的方式是比较简单的一种置换方式，可调节的也是比较少的。</span> </div><div style="text-align:center;font-size:14px;"><span style="color:#60D978;">也是一种比较常用的方式，另外一种就是比较高级的玩法。</span> </div><div style="text-align:center;font-size:14px;"><span style="font-weight:bold;color:#60D978;">着色器的置换方式</span> </div><div style="text-align:center;font-size:14px;"><br></div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/FCm9e1KqgoAlskP.png" style="width:481px;" width="481" height="207" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="font-weight:bold;color:#60D978;">建立一个displacement。在displacement中选择贴图。</span> </div><div style="text-align:center;font-size:14px;"><span style="font-weight:bold;color:#60D978;">然后给一个强度值，在模型中的设置如下：</span> </div><div style="text-align:center;"><img alt="" src="https://i.loli.net/2019/08/27/2F1IczLuYKo3WVv.png" style="width:536px;" width="536" height="180" title="" align=""> </div><div style="text-align:center;font-size:14px;"><span style="font-weight:bold;color:#60D978;">在置换模型中选择变形加bump，这种方式实际上并没有增加面，而是以一种着色器的方式在视图中显示：adaptive span count 是细分值。</span> </div><div style="text-align:center;"><span style="color:#60D978;"></span> </div><p><br></p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> clarisse相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渲染 </tag>
+            
+            <tag> clarisse </tag>
+            
+            <tag> 材质 </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>clarisse系列-约束工具的使用方法</title>
       <link href="/2019/08/26/share/clarisse_xili2/"/>
       <url>/2019/08/26/share/clarisse_xili2/</url>
@@ -1154,9 +1185,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -1165,9 +1196,9 @@
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
