@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/zuokangbo/zuokangbo.github.io/"/>
-  <updated>2019-08-27T15:56:34.172Z</updated>
+  <updated>2019-08-28T15:41:26.746Z</updated>
   <id>https://github.com/zuokangbo/zuokangbo.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>clarisse系列-中常用的灯光类型</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/28/share/clarisse_xili4/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/28/share/clarisse_xili4/</id>
+    <published>2019-08-28T15:34:09.369Z</published>
+    <updated>2019-08-28T15:41:26.746Z</updated>
+    
+    <content type="html"><![CDATA[<div style="text-align:center;"> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/28/fUPjG9SxXZ6kDv1.jpg"></div><a id="more"></a><p>  </p><p style="text-align:center;font-size:14px;">    <span style="font-size:24px;color:#E53333;">clarisse4.中常用的灯光类型</span><span style="font-size:24px;color:#E53333;"></span>  </p>  <p style="text-align:center;font-size:14px;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">clarisse中的所有灯光。</span>  </p>  <p style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/camPA3OlLxvBpUh.png" style="width:418px;" width="418" height="81" title="" align="">  </p>  <p style="text-align:center;">    <br>  </p>  <p style="text-align:center;">    <br>  </p>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">以前clarisse是有一套自己的灯光，不过新版本后基本上就不使用了，大多数也就用新加入的物理灯光，所有的灯光类型也不是很多。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">分别是ambient 环境光，可以让环境整体变亮</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">distant：方向光，模拟从无限远处产生的光照。l类似于太阳光。</span>  </div>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">point: 点光，模拟一个点光源，四周发光(点的大小可以模拟一个球，调整发光体的半径)</span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/1OvSwEVY9nDZer6.png" style="width:620px;" width="620" height="359" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">虚线部分是发光体的半径</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/VEC6SQebdjLav7U.png" style="width:620px;" width="620" height="365" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">灯光的衰减设置</span>  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">spot：聚光灯，模拟类型舞台，手电等之类的灯光。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">这里有一个小技巧，可以选择灯光角度去观看，类型与maya的方式。</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/OBsh35IM6vxSkrY.png" style="width:281px;" width="281" height="160" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">area：区域光，也就是面光。原理和maya的差不多。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">environment：基于hdr的灯光。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">hdr由于比较常用，下面介绍他的具体使用方法：</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">创建环境光，导入hdr贴图：</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/zENOGU6nHvopwkt.png" style="width:620px;" width="620" height="250" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">如果要看到hdr背景图，可以手动建立一个球体，当做环境的背景。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">选择environment的父子链接，把球体作为他的父对象。这样旋转球体就可以控制灯光的方向。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">球体可以链接一个matte材质，注意的是要把球体的计算光线追踪关掉。</span>  </div>  <p style="text-align:center;">    <span style="color:#00D5FF;"></span><img alt="" src="https://i.loli.net/2019/08/28/QBfnKo9czV1mxjZ.png" style="width:348px;" width="348" height="195" title="" align="">  </p>  <p style="text-align:center;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">建立好后，如图效果：</span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/J18ImLW3skapvxw.png" style="width:620px;" width="620" height="299" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;">    <span style="color:#00D5FF;"></span>  </div><p></p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;text-align:center;&quot;&gt;
+ &lt;img width=&quot;933&quot; height=&quot;235&quot; alt=&quot;&quot; style=&quot;padding : 1px;&quot; src=&quot;https://i.loli.net/2019/08/28/fUPjG9SxXZ6kDv1.jpg&quot;&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="clarisse相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/clarisse%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="渲染" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B8%B2%E6%9F%93/"/>
+    
+      <category term="clarisse" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/clarisse/"/>
+    
+      <category term="材质" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%9D%90%E8%B4%A8/"/>
+    
+      <category term="基础" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>clarisse系列-中置换的使用</title>
@@ -549,32 +579,6 @@
       <category term="感想" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%84%9F%E6%83%B3/"/>
     
       <category term="随笔" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>国外mari直播讲解教学</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/07/21/mari%E5%9B%BD%E5%A4%96/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/07/21/mari国外/</id>
-    <published>2019-07-21T02:19:58.689Z</published>
-    <updated>2019-07-21T03:16:52.349Z</updated>
-    
-    <content type="html"><![CDATA[<p>**</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  在国内贴图制作软件被substance painter大部分占领的情况下，还有一款贴图制作软件没有被国内重视。相比substance painter,MARI可以输出高达精度的贴图纹理和多象限绘制的能力，同时兼顾游戏和影视绘制高精度纹理的需求，对硬件要求也更高。</p><p>**<br><a id="more"></a><br><div class="content"><div class="content-container layout-text-media pad-left" style="display: table;"><div class="media" style="float: left;"><div class="text-media"><div class="media-wrapper"><div class="media-container" style="max-width: 1201px;"><div class="media-shadow"><iframe class="media-frame video" autostart="false" frameborder="0" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=59539298&cid=103731994&page=1" style="max-width: 720.6px; height: 405px; width: 720.6px;"></iframe></div><div class="credit"></div></div></div></div></div><div class="text" style="width: 40%; display: table-cell;"><div class="container" style="display: table-cell; width: auto;"><h2 class="date">March 2019</h2><h3>国外mari直播讲解教学</h3><p><a style="font-size:30px; color:#00FA9A;" href="https://www.bilibili.com/video/av59539298/" target="_blank">在线观看</a></p></div></div></div></div><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 --></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;**&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;  在国内贴图制作软件被substance painter大部分占领的情况下，还有一款贴图制作软件没有被国内重视。相比substance painter,MARI可以输出高达精度的贴图纹理和多象限绘制的能力，同时兼顾游戏和影视绘制高精度纹理的需求，对硬件要求也更高。&lt;/p&gt;
-&lt;p&gt;**&lt;br&gt;
-    
-    </summary>
-    
-      <category term="mair相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/mair%E7%9B%B8%E5%85%B3/"/>
-    
-    
-      <category term="贴图" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E8%B4%B4%E5%9B%BE/"/>
-    
-      <category term="mari" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/mari/"/>
     
   </entry>
   

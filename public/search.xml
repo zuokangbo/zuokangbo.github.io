@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>clarisse系列-中常用的灯光类型</title>
+      <link href="/2019/08/28/share/clarisse_xili4/"/>
+      <url>/2019/08/28/share/clarisse_xili4/</url>
+      
+        <content type="html"><![CDATA[<div style="text-align:center;"> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/28/fUPjG9SxXZ6kDv1.jpg"></div><a id="more"></a><p>  </p><p style="text-align:center;font-size:14px;">    <span style="font-size:24px;color:#E53333;">clarisse4.中常用的灯光类型</span><span style="font-size:24px;color:#E53333;"></span>  </p>  <p style="text-align:center;font-size:14px;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">clarisse中的所有灯光。</span>  </p>  <p style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/camPA3OlLxvBpUh.png" style="width:418px;" width="418" height="81" title="" align="">  </p>  <p style="text-align:center;">    <br>  </p>  <p style="text-align:center;">    <br>  </p>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">以前clarisse是有一套自己的灯光，不过新版本后基本上就不使用了，大多数也就用新加入的物理灯光，所有的灯光类型也不是很多。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">分别是ambient 环境光，可以让环境整体变亮</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">distant：方向光，模拟从无限远处产生的光照。l类似于太阳光。</span>  </div>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">point: 点光，模拟一个点光源，四周发光(点的大小可以模拟一个球，调整发光体的半径)</span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/1OvSwEVY9nDZer6.png" style="width:620px;" width="620" height="359" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">虚线部分是发光体的半径</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/VEC6SQebdjLav7U.png" style="width:620px;" width="620" height="365" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">灯光的衰减设置</span>  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">spot：聚光灯，模拟类型舞台，手电等之类的灯光。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">这里有一个小技巧，可以选择灯光角度去观看，类型与maya的方式。</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/OBsh35IM6vxSkrY.png" style="width:281px;" width="281" height="160" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">area：区域光，也就是面光。原理和maya的差不多。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">environment：基于hdr的灯光。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">hdr由于比较常用，下面介绍他的具体使用方法：</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">创建环境光，导入hdr贴图：</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/zENOGU6nHvopwkt.png" style="width:620px;" width="620" height="250" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">如果要看到hdr背景图，可以手动建立一个球体，当做环境的背景。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">选择environment的父子链接，把球体作为他的父对象。这样旋转球体就可以控制灯光的方向。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">球体可以链接一个matte材质，注意的是要把球体的计算光线追踪关掉。</span>  </div>  <p style="text-align:center;">    <span style="color:#00D5FF;"></span><img alt="" src="https://i.loli.net/2019/08/28/QBfnKo9czV1mxjZ.png" style="width:348px;" width="348" height="195" title="" align="">  </p>  <p style="text-align:center;">    <br>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;">建立好后，如图效果：</span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#00D5FF;"><br></span>  </p>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/28/J18ImLW3skapvxw.png" style="width:620px;" width="620" height="299" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;">    <span style="color:#00D5FF;"></span>  </div><p></p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> clarisse相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 渲染 </tag>
+            
+            <tag> clarisse </tag>
+            
+            <tag> 材质 </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>clarisse系列-中置换的使用</title>
       <link href="/2019/08/27/share/clarisse_xili3/"/>
       <url>/2019/08/27/share/clarisse_xili3/</url>
@@ -1163,17 +1194,6 @@
     
     
     <entry>
-      <title>相册</title>
-      <link href="/photos/index.html"/>
-      <url>/photos/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/photos/ins.css"/>
       <url>/photos/ins.css</url>
@@ -1185,11 +1205,11 @@
     
     
     <entry>
-      <title>Tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>相册</title>
+      <link href="/photos/index.html"/>
+      <url>/photos/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" href="./ins.css"><div class="photos-btn-wrap"><a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Ins</a></div><div class="instagram itemscope"><a href="https://www.instagram.com/litten225/" target="_blank" class="open-ins">图片来自instagram，正在加载中…</a></div><script>  (function() {    var loadScript = function(path) {      var $script = document.createElement('script')      document.getElementsByTagName('body')[0].appendChild($script)      $script.setAttribute('src', path)    }    setTimeout(function() {      loadScript('./ins.js')    }, 0)  })()</script>]]></content>
       
     </entry>
     
@@ -1199,6 +1219,17 @@
       <title>categories</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
