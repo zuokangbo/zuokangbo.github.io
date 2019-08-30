@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/zuokangbo/zuokangbo.github.io/"/>
-  <updated>2019-08-28T15:41:26.746Z</updated>
+  <updated>2019-08-30T15:13:35.028Z</updated>
   <id>https://github.com/zuokangbo/zuokangbo.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>clarisse系列-程序纹理节点的运用</title>
+    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/30/share/clarisse_xili5/"/>
+    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/08/30/share/clarisse_xili5/</id>
+    <published>2019-08-30T14:51:13.174Z</published>
+    <updated>2019-08-30T15:13:35.028Z</updated>
+    
+    <content type="html"><![CDATA[<div style="text-align:center;"> <img width="933" height="235" alt="" style="padding : 1px;" src="https://i.loli.net/2019/08/30/yzNAd3EwURQu2ix.jpg"></div><a id="more"></a><p>  <div style="text-align:center;font-size:14px;">    <br>  </div>  </p><p style="text-align:center;font-size:14px;">    <span style="color:#DF402A;font-size:24px;">clarisse中的程序纹理</span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#DF402A;font-size:24px;"><br></span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#DF402A;font-size:24px;"><br></span>  </p>  <p style="text-align:center;font-size:14px;">    <span style="color:#DF402A;font-size:24px;"><br></span>  </p>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/4OngGmsavetMw3J.png" style="width:268px;" width="268" height="593" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="color:#DF402A;">主要是在textures中，下面主要讨论一些常用的程序纹理节点使用方法。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:26px;color:#DF402A;">1、gradient,梯度渐变</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/Bgn75poiaYCfhsb.png" style="width:386px;" width="386" height="240" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">在mode中可以选择不同的模式，比如导入的vdb有可以链接到input上。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">lncidence（入射角度）模式，他可以识别对象的边缘和摄像机的角度。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">slope模式，这种模式比较常用，可以识别出比较平缓的表面，比如区分悬崖，植被区域。</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/6vSbki2Kr91CNsI.jpg" style="width:620px;" width="620" height="495" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">slope模型效果</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">curvature节点,这个在大部分的三维软件中都有的。可以提取模型边缘的区域。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">perrlin——noise，随机噪波。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">occlusion，todo</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">reorder：重新排序，可以对rgb的顺序进行更改。如果要单通道，可以把所有的通道都给一个，如：rrra</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/gxbnOIvjmkwXzQP.png" style="width:355px;" width="355" height="192" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">所有的计算的节点是在math中</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">rescale节点，和maya的value的节点比较类似，控制最亮和最暗的范围。</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">还有一个是utility，这个基本上和maya for arnold的差不多，</span>  </div>  <div style="text-align:center;font-size:14px;">    <span style="font-size:18px;color:#DF402A;">用途1，</span>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/AV9Ux1nF86PTDNE.png" style="width:620px;" width="620" height="159" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;">    <img alt="" src="https://i.loli.net/2019/08/30/oAJyMDvn9Z6FKdE.png" style="width:620px;" width="620" height="436" title="" align="">  </div>  <div style="text-align:center;font-size:14px;">    <br>  </div>  <div style="text-align:center;">  </div><p></p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;text-align:center;&quot;&gt;
+ &lt;img width=&quot;933&quot; height=&quot;235&quot; alt=&quot;&quot; style=&quot;padding : 1px;&quot; src=&quot;https://i.loli.net/2019/08/30/yzNAd3EwURQu2ix.jpg&quot;&gt;
+&lt;/div&gt;
+    
+    </summary>
+    
+      <category term="clarisse相关" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/clarisse%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="渲染" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%B8%B2%E6%9F%93/"/>
+    
+      <category term="clarisse" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/clarisse/"/>
+    
+      <category term="材质" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%9D%90%E8%B4%A8/"/>
+    
+      <category term="基础" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>clarisse系列-中常用的灯光类型</title>
@@ -347,11 +377,11 @@
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/categories/%E5%8A%A8%E7%94%BB/"/>
     
     
-      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="动画" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
     
       <category term="小知识" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    
+      <category term="分享" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -556,29 +586,6 @@
       <category term="开发" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E5%BC%80%E5%8F%91/"/>
     
       <category term="思维" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么现在越来越感觉恋爱越困难了</title>
-    <link href="https://github.com/zuokangbo/zuokangbo.github.io/2019/07/21/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%81%8B%E7%88%B1%E8%B6%8A%E6%9D%A5%E8%B6%8A%E9%9A%BE/"/>
-    <id>https://github.com/zuokangbo/zuokangbo.github.io/2019/07/21/为什么恋爱越来越难/</id>
-    <published>2019-07-21T13:13:10.641Z</published>
-    <updated>2019-07-24T14:28:33.412Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>@[TOC](为什么现在越来越感觉恋爱越困难了?)</code></pre><h1 id="起因"><a href="#起因" class="headerlink" title="起因?"></a>起因?</h1><p> 前两天，我和朋友聊天虚度无聊的时间。有一个朋友为感情的事愁眉不展，她说在生活的压力下，感觉自己变得难以心动，对一切都感到麻木。<br>我也思考起，自己和身边人的感情生活。确实，好像一切都变了，但不是变得难以心动，而是心动之后所面对的一连串现实问题，让我们望而却步了。<br><a id="more"></a></p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>二十多岁的我们，为什么觉得谈恋爱好难</p><p>才想起，过去的我并不觉得恋爱是件难事。</p><p>在我年幼无知的时候，我拿着自己心爱的psp游戏机当礼物，自己半年的零花钱就没了，因为那天是她的生日。</p><p>之后的大部分时间里，每天吃方便面和包子馒头之类的当午饭，靠着同学的接济硬是撑了过去。那时候我并没有想太多，只是义无反顾地想让对方开心，再苦也值得。</p><p>高中毕业以后，她去了在北方的一个城市上学。而我留在了南方，离家不远的学校。有时候她会说：“想你了。可以来找我吗。”我回复一个笑容，然后迅速转移到下一个话题中。</p><p>我在想，如果还是那个时候我，一定会花光积蓄去找她吧。不知不觉，我已经不再会为爱情倾其所有。</p><p>而与此同时，似乎她也开始改变了。我们每天的对话，经常只有三句：“我起来了”，“上课去了”，“早点睡”。</p><p>从前，她事无大小总会跟我分享，但是后来她再也没谈起过她的生活。反倒是在朋友圈里，我才看见她参加的各样聚会，跟朋友在周边城市旅游，有时玩到半夜才回家。</p><p>但我们都没有因此而感到难过或不适，反而开始适应了彼此独立的生活，不再盲目地追求当年义无反顾的激情。</p><p>从前我们年轻气盛，认为恋爱大过天，什么阻碍都不放在眼里，只要彼此相爱就好。但是二十多岁了，我们逐渐各自独立，而我再也不敢这样感性地义无反顾下去。</p><p>因为我们都心知肚明，异地恋成功的概率太小，成本太高了。也许，这几年的感情，很快就只能是一段回忆了。</p><p>而那些曾经让人羡慕的校园模范情侣们，到了现在的年纪，好像也走不过这一遭。</p><p>曾经我们可能因为长相，因为性格，也可能是相互感觉不错，就能尝试走到一起。但现在，恋爱却多了很多前提。</p><p>工作是否稳定？</p><p>有房有车吗？</p><p>会不会经常分隔两地？</p><p>家庭环境如何？</p><p>双方父母怎么样？</p><p>在精打细算完一连串的问题之后，爱反而成为了最后才会思考的问题。<br>    我曾经遇到过十分喜欢的人，常常聊着天就会对着手机不自觉地笑出声。我们喜欢同样的歌曲和食物，喜欢同一座城市，还会幼稚地拍下身边有趣的东西发给对方，有着共同目标。</p><p>但我们都不敢轻易尝试开始，因为于我们而言，要在一起很容易，往后要面对的问题却很难。</p><p>同样刚毕业的我们，养活自己都已经很吃力，更不要说负担两个人的额外花销。更何况工作之余，已没有太多精力顾及另一个人。</p><p>朋友说：“我突然很害怕。害怕以后会迫不得已选择一个会给我良好生活、满足一切前提的人，但不是一个我真正喜欢的人。”</p><p>我也很害怕。我害怕自己无法给对方带来一个好的生活，只剩下我独自面对着现实带来的孤独和折磨。</p><p>似乎恋爱中的问题，已经让我们逐渐变得可怕。</p><p>比如当她们得知一个大学朋友，即将嫁给一个三十多岁的有钱有势的人时，身边人的第一反应是羡慕和恭贺，但却没有一个人问她是否喜欢对方。</p><p>在那一瞬间，她觉得自己“这么多年来的书都白读了”。因为在现实面前，我们都不经意变得肤浅起来。</p><p>我反复思考她所说的话，一直到凌晨四点都没睡着。</p><p>也许，我们真的过了只要努力一下就能在一起的年纪了，过去藏在校服和学习背后的东西，终究被扯了出来。</p><!-- 来必力City版安装代码 --><div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ=="><script type="text/javascript">   (function(d, s) {       var j, e = d.getElementsByTagName(s)[0];       if (typeof LivereTower === 'function') { return; }       j = d.createElement(s);       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';       j.async = true;       e.parentNode.insertBefore(j, e);   })(document, 'script');</script><noscript> 为正常使用来必力评论功能请激活JavaScript</noscript></div><!-- City版安装代码已完成 -->]]></content>
-    
-    <summary type="html">
-    
-      &lt;pre&gt;&lt;code&gt;@[TOC](为什么现在越来越感觉恋爱越困难了?)
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因?&quot;&gt;&lt;/a&gt;起因?&lt;/h1&gt;&lt;p&gt; 前两天，我和朋友聊天虚度无聊的时间。有一个朋友为感情的事愁眉不展，她说在生活的压力下，感觉自己变得难以心动，对一切都感到麻木。&lt;br&gt;我也思考起，自己和身边人的感情生活。确实，好像一切都变了，但不是变得难以心动，而是心动之后所面对的一连串现实问题，让我们望而却步了。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="感想" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E6%84%9F%E6%83%B3/"/>
-    
-      <category term="随笔" scheme="https://github.com/zuokangbo/zuokangbo.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
