@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python学习_1 | 个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="使用pycharm给玛雅写python">
+<meta name="keywords" content="python,python基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python学习_1">
+<meta property="og:url" content="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/12/python学习_1/index.html">
+<meta property="og:site_name" content="个人主页">
+<meta property="og:description" content="使用pycharm给玛雅写python">
+<meta property="og:updated_time" content="2019-06-11T16:04:11.271Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python学习_1">
+<meta name="twitter:description" content="使用pycharm给玛雅写python">
+  
+    <link rel="alternate" href="/atom.xml" title="个人主页" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-python学习_1" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/12/python学习_1/" class="article-date">
+  <time class="post-time" datetime="2019-06-11T16:01:44.201Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">12</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python学习_1
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2019/06/12/python学习_1/" class="leancloud_visitors" data-flag-title="python学习_1">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用pycharm给玛雅写python<br><a id="more"></a><br>
+
+<div class="blog-content-box">
+  <div class="article-header-box">
+    <div class="article-header">
+      <div class="article-title-box">
+      </div>
+      <div class="article-info-box">
+        <div class="operating">
+                  </div>
+      </div>
+    </div>
+  </div>
+  <article class="baidu_pl">
+    <div id="article_content" class="article_content clearfix csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post">
+            <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-f57960eb32.css">
+                              <div id="content_views" class="markdown_views prism-atom-one-dark">
+            <!-- flowchart 箭头图标 勿删 -->
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"/>
+            </svg>
+            <h1><a name="t0"></a><a id="maya_python__0" target="_blank"></a>maya python 的简单使用</h1>
+<h3><a name="t1"></a><a id="pycharmpython_2" target="_blank"></a>使用pycharm给玛雅写python</h3>
+<blockquote>
+<p>里边含有玛雅命令自动提示的配置<br>
+<code>https://download.csdn.net/download/bigtail_cat/10543887</code> 文件下载网址</p>
+</blockquote>
+<h5><a id="_6" target="_blank"></a>基本图形的创建</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span><span class="token punctuation">)</span>      <span class="token comment"># 创建默认的小球</span>
+    cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>   <span class="token comment"># 创建半径为5的小球</span>
+    cmds<span class="token punctuation">.</span>polyColorPerVertex<span class="token punctuation">(</span>colorRGB<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> colorDisplayOption<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token comment">#设置小球的颜色</span>
+
+    cmds<span class="token punctuation">.</span>polyCube<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'myCube'</span><span class="token punctuation">,</span> depth<span class="token operator">=</span><span class="token number">12.5</span><span class="token punctuation">,</span> height<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment">#创建立方体</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>cmds<span class="token punctuation">.</span><span class="token builtin">help</span><span class="token punctuation">(</span><span class="token string">'polyCube'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                      <span class="token comment"># 查看polyCube函数的参数列表</span>
+
+    <span class="token comment">#下面两种创建立方体方式等同</span>
+    cmds<span class="token punctuation">.</span>polyCube<span class="token punctuation">(</span>w<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> h<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> sx<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> sy<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> sz<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> ax<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cuv<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> ch<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>polyCube<span class="token punctuation">(</span>width<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  height<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  depth<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  subdivisionsX<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  subdivisionsY<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  subdivisionsZ<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                  axis<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                  createUVs<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span>
+                  constructionHistory<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li><li style="color: rgb(153, 153, 153);">19</li><li style="color: rgb(153, 153, 153);">20</li><li style="color: rgb(153, 153, 153);">21</li><li style="color: rgb(153, 153, 153);">22</li></ul></pre>
+<h5><a id="_32" target="_blank"></a>根据创建的小球获得信息并改变小球的大小</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    sphere <span class="token operator">=</span> cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span><span class="token punctuation">)</span>      <span class="token comment"># 创建默认的小球</span>
+    cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span>r<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>            <span class="token comment"># 创建半径为5的小球</span>
+    cmds<span class="token punctuation">.</span>polyColorPerVertex<span class="token punctuation">(</span>colorRGB<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> colorDisplayOption<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token comment">#设置小球的颜色</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>sphere<span class="token punctuation">)</span>
+
+    rad <span class="token operator">=</span> cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span>sphere<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> radius<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token comment"># 获取小球的半径</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'the sphere radius is %d'</span> <span class="token operator">%</span>rad<span class="token punctuation">)</span>
+
+    cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span>sphere<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> e<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> radius<span class="token operator">=</span>rad <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>    <span class="token comment"># 将小球的半径扩大二倍</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li></ul></pre>
+<h5><a id="getAttr__setAttr__49" target="_blank"></a>getAttr 和 setAttr 获得和设置属性</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    loc <span class="token operator">=</span> cmds<span class="token punctuation">.</span>spaceLocator<span class="token punctuation">(</span><span class="token punctuation">)</span>                <span class="token comment"># 创建打印定位器</span>
+    <span class="token keyword">print</span> loc
+
+    sx <span class="token operator">=</span> cmds<span class="token punctuation">.</span>getAttr<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.scaleX'</span><span class="token punctuation">)</span>    <span class="token comment"># 获得locator的scaleX</span>
+    cmds<span class="token punctuation">.</span>setAttr<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.scaleX'</span><span class="token punctuation">,</span> sx <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment"># 修改locator的scaleX</span>
+
+    <span class="token comment"># 同下效果</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>xform<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> q<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> translation<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 获得打印定位器的位置</span>
+    cmds<span class="token punctuation">.</span>xform<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> translation<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>           <span class="token comment"># 移动打印定位器的位置</span>
+
+    <span class="token comment">#同上效果</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>getAttr<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.translate'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>           <span class="token comment"># 获得打印定位器的位置</span>
+    cmds<span class="token punctuation">.</span>setAttr<span class="token punctuation">(</span>loc<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.translate'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>         <span class="token comment"># 移动打印定位器的位置</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li></ul></pre>
+<h5><a id="connectAttr__disconnectAttr__68" target="_blank"></a>connectAttr 和 disconnectAttr 连接与断开属性连接</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    sphere <span class="token operator">=</span> cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment">#创建小球</span>
+    cube   <span class="token operator">=</span> cmds<span class="token punctuation">.</span>polyCube<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token comment"># 创建立方体</span>
+
+    cmds<span class="token punctuation">.</span>connectAttr<span class="token punctuation">(</span>cube <span class="token operator">+</span> <span class="token string">'.ry'</span><span class="token punctuation">,</span> sphere <span class="token operator">+</span> <span class="token string">'.ty'</span><span class="token punctuation">)</span> <span class="token comment">#将立方体的y-rotation连接到球体的y-translation</span>
+    cmds<span class="token punctuation">.</span>disconnectAttr<span class="token punctuation">(</span>cube <span class="token operator">+</span> <span class="token string">'.ry'</span><span class="token punctuation">,</span> sphere <span class="token operator">+</span> <span class="token string">'.ty'</span><span class="token punctuation">)</span>  <span class="token comment"># 断开连接</span>
+
+    <span class="token comment">#立方体每旋转九十度 小球旋转一个单位</span>
+    mult <span class="token operator">=</span> cmds<span class="token punctuation">.</span>createNode<span class="token punctuation">(</span><span class="token string">'multiplyDivide'</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>connectAttr<span class="token punctuation">(</span>cube <span class="token operator">+</span> <span class="token string">'.ry'</span><span class="token punctuation">,</span> mult <span class="token operator">+</span> <span class="token string">'.input1X'</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>setAttr<span class="token punctuation">(</span>mult <span class="token operator">+</span> <span class="token string">'.input2X'</span><span class="token punctuation">,</span> <span class="token number">1.0</span> <span class="token operator">/</span> <span class="token number">90.0</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>connectAttr<span class="token punctuation">(</span>mult <span class="token operator">+</span> <span class="token string">'.outputX'</span><span class="token punctuation">,</span> sphere <span class="token operator">+</span> <span class="token string">'.ty'</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>select<span class="token punctuation">(</span>cube<span class="token punctuation">)</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li></ul></pre>
+<h5><a id="addAttr__88" target="_blank"></a>addAttr 增加属性</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    cmds<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">(</span>new<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> f<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    sphere_xform<span class="token punctuation">,</span> sphere_shape <span class="token operator">=</span> cmds<span class="token punctuation">.</span>polySphere<span class="token punctuation">(</span>n<span class="token operator">=</span><span class="token string">'Earth'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 添加属性</span>
+    cmds<span class="token punctuation">.</span>addAttr<span class="token punctuation">(</span>sphere_xform<span class="token punctuation">,</span> attributeType<span class="token operator">=</span><span class="token string">'float'</span><span class="token punctuation">,</span> shortName<span class="token operator">=</span><span class="token string">'mass'</span><span class="token punctuation">,</span> longName<span class="token operator">=</span><span class="token string">'mass'</span><span class="token punctuation">,</span> defaultValue<span class="token operator">=</span><span class="token number">5.9742e24</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>addAttr<span class="token punctuation">(</span>sphere_xform<span class="token punctuation">,</span> dataType<span class="token operator">=</span><span class="token string">'string'</span><span class="token punctuation">,</span> shortName<span class="token operator">=</span><span class="token string">'alt'</span><span class="token punctuation">,</span> longName<span class="token operator">=</span><span class="token string">'alternateName'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 向属性中添加值 设置属性</span>
+    cmds<span class="token punctuation">.</span>setAttr<span class="token punctuation">(</span>sphere_xform <span class="token operator">+</span> <span class="token string">'.alternateName'</span><span class="token punctuation">,</span> <span class="token string">'Terra'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">'string'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 获得属性值</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>getAttr<span class="token punctuation">(</span>sphere_xform <span class="token operator">+</span> <span class="token string">'.mass'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>getAttr<span class="token punctuation">(</span>sphere_xform <span class="token operator">+</span> <span class="token string">'.alt'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li></ul></pre>
+<h5><a id="_110" target="_blank"></a>创建窗口</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># 创建一个窗口</span>
+    win <span class="token operator">=</span> cmds<span class="token punctuation">.</span>window<span class="token punctuation">(</span><span class="token string">'ar_optionsWindow'</span><span class="token punctuation">,</span> title<span class="token operator">=</span><span class="token string">'first window'</span><span class="token punctuation">,</span> widthHeight<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">546</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>showWindow<span class="token punctuation">(</span>win<span class="token punctuation">)</span>
+
+    <span class="token comment"># 修改项目标题</span>
+    cmds<span class="token punctuation">.</span>deleteUI<span class="token punctuation">(</span>win<span class="token punctuation">,</span> window<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    win <span class="token operator">=</span> cmds<span class="token punctuation">.</span>window<span class="token punctuation">(</span><span class="token string">'ar_optionsWindow'</span><span class="token punctuation">,</span> title<span class="token operator">=</span><span class="token string">'second window'</span><span class="token punctuation">,</span> widthHeight<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">546</span><span class="token punctuation">,</span> <span class="token number">350</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span>showWindow<span class="token punctuation">(</span>win<span class="token punctuation">)</span>
+
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li></ul></pre>
+<h5><a id="ls__select__128" target="_blank"></a>ls 与 select 列出与选择节点</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 打印场景里边的所有节点</span>
+    nodes <span class="token operator">=</span> cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+
+    <span class="token comment"># 打印场景中所有transform类型的节点</span>
+    nodes <span class="token operator">=</span> cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">'transform'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+
+    <span class="token comment"># 打印场景中所有以persp开头名字的节点</span>
+    nodes <span class="token operator">=</span> cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span><span class="token string">'persp*'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nodes<span class="token punctuation">)</span>
+
+    <span class="token comment">#打印当前场景中选中的节点</span>
+    cmds<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">'side*'</span><span class="token punctuation">,</span> <span class="token string">'top*'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span>selection<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    cmds<span class="token punctuation">.</span>select<span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">'shape'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cmds<span class="token punctuation">.</span>ls<span class="token punctuation">(</span>sl<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li><li style="color: rgb(153, 153, 153);">19</li><li style="color: rgb(153, 153, 153);">20</li><li style="color: rgb(153, 153, 153);">21</li><li style="color: rgb(153, 153, 153);">22</li></ul></pre>
+<h5><a id="file__154" target="_blank"></a>file 场景中文件的创建与打开</h5>
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)"><span class="token comment"># -*- coding: UTF-8 -*-</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> maya<span class="token punctuation">.</span>cmds <span class="token keyword">as</span> cmds
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    cmds<span class="token punctuation">.</span>polyCube<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 保存场景中的所有文件</span>
+    path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'HOME'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'cuba.ma'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span> path
+    cmds<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">(</span>rename<span class="token operator">=</span>path<span class="token punctuation">)</span>
+    cmds<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">(</span>save<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    <span class="token comment">#新建场景并打开文件</span>
+    cmds<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">(</span>new<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> force<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'HOME'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'cuba.ma'</span><span class="token punctuation">)</span>  <span class="token comment"># 打开文件</span>
+    <span class="token keyword">print</span> path
+    cmds<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> force<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<div class="hljs-button {2}" data-title="复制"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li></ul></pre>
+
+          </div>
+          <link href="https://csdnimg.cn/release/phoenix/mdeditor/markdown_views-258a4616f7.css" rel="stylesheet">
+                  </div>
+  </article>
+</div>
+
+</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/12/python学习_1/" data-id="cjzzjtpie006jbksdv5elbhi7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python基础/">python基础</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/12/python开发工具/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python开发工具
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/11/share/mari4.5新特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mari4.5新特性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+  <div id="comments" class="comments">
+    <div id="uyan_frame"></div>
+  </div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">个人主页</h1>
+    <h2 class="blog-subtitle">愿我的只言片语，为你的成长带来帮助！</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://space.bilibili.com/17963985" target="_blank" title="bilibili">
+          bilibili
+        </a>
+      
+        <a class="hvr-bounce-in" href="/mimi/grjl.html" target="_blank" title="个人简历">
+          个人简历
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://allzkb.gearhostpreview.com/" target="_blank" title="私有教程链接">
+          私有教程链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="其他链接">
+          其他链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="常用网页">
+          常用网页
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://hdrihaven.com/" target="_blank" title="HDR纹理">
+          HDR纹理
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+
+
+   <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="hide-button">隐藏</div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = 'https://haremu.com/'
+    </script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script>
+    <script type="text/javascript">
+        loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 左康波<br>
+      由强力驱动 | 
+      主题
+      
+        |<script src="http://s11.cnzz.com/z_stat.php?id=1234&web_id=1234" language="JavaScript"></script>
+      
+    </div>
+    
+  </div>
+
+
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/mimi/grjl.html" title="" class="menuItem">简历</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">搜索</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("null", "null");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.article-title').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+  </div>
+</body>
+</html>

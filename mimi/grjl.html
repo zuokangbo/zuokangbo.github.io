@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>123.htm</title>
+<script language="javascript">
+function userlogin(){
+txt=prompt("请你输入查看密码，由于包含了很多个人的太多信息，不便于公开，如需要，管理员联系方式：qq：1156298563，或邮箱","如果不知道请联系管理员");
+if (txt!='123') {
+alert("密码不正确,无法进入本站!!");
+window.opener=null;
+window.location.href="b.html";
+
+}else{
+alert("登陆成功！");
+window.location.href="c.html";
+}
+}
+userlogin();
+</script>
+</head>
+<body>
+恭喜你登陆成功;
+</body>
+</html>

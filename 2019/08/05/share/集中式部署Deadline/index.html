@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>集中式部署Deadline | 个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="** 前言 所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案。 **">
+<meta name="keywords" content="部署,Deadline">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集中式部署Deadline">
+<meta property="og:url" content="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/05/share/集中式部署Deadline/index.html">
+<meta property="og:site_name" content="个人主页">
+<meta property="og:description" content="** 前言 所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案。 **">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015163437996.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015187201557.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029488209.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015280366805.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015309110125.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015328238281.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015349249988.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/15650153743756.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015403412642.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015424342696.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015449837986.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015463527110.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015479193360.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/156501549572939.jpeg">
+<meta property="og:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015108783840.jpeg">
+<meta property="og:updated_time" content="2019-08-05T15:18:51.244Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="集中式部署Deadline">
+<meta name="twitter:description" content="** 前言 所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案。 **">
+<meta name="twitter:image" content="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015163437996.jpeg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人主页" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-share/集中式部署Deadline" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/05/share/集中式部署Deadline/" class="article-date">
+  <time class="post-time" datetime="2019-08-05T14:55:33.512Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">05</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      集中式部署Deadline
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/渲染农场相关/">渲染农场相关</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2019/08/05/share/集中式部署Deadline/" class="leancloud_visitors" data-flag-title="集中式部署Deadline">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>**</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案。</p>
+<p>**<br><a id="more"></a><br>
+<section style="overflow: hidden;">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案，部署环境</p><p><br></p><ul style="margin: 1.2em 0px;padding-left: 2em;" class=" list-paddingleft-2"><li><p>服务器：Windows Server 2012 R2 Standard<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--!doctype--><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!--!doctype--></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;所谓集中式部署即将DeadlineRepository与DeadlineClient全部部署在服务器，从而客户端无需安装任何东西即可使用的方案，部署环境</p></li><li><p><br></p></li><li><p>服务器：Windows Server 2012 R2 Standard</p></li><li><p>客户端：Window 10 企业版</p></li><li><p>Deadline版本：Thinkbox Deadline v10.0.20.2 Win</p></li><li><p><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;因为需要集中式部署，以便域环境局域网内所有客户端都能使用DeadlineClient，所以我们映射一个共享网盘出来，比如Y盘。<br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;盘符映射完成后，安装DeadlineRepository。</p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;如果提示重启，重启重新安装即可。<br></p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6330578512396694" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029466320.jpeg" data-type="png" data-w="605" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015163437996.jpeg" data-tools-id="23748"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;同意License，下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6301824212271974" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029760934.jpeg" data-type="png" data-w="603" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015187201557.jpeg" data-tools-id="21211"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;Repository Directory的路径安装到Y盘。<br></p></li><li><p style="text-align: center;"><img class="rich_pages" data-ratio="0.6264462809917355" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029488209.jpeg" data-type="png" data-w="605" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029488209.jpeg"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;选择安装新的MongoDB database，此处需要网络环境下载。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6284779050736498" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029380288.jpeg" data-type="png" data-w="611" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015280366805.jpeg" data-tools-id="72943"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6292682926829268" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029982988.jpeg" data-type="png" data-w="615" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015309110125.jpeg" data-tools-id="77703"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;MongoDB Directory的路径同样安装到Y盘，Hostname不变。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.631578947368421" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029684611.jpeg" data-type="png" data-w="608" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015328238281.jpeg" data-tools-id="33555"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;数据库暂时不用密码。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6243822075782537" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029570300.jpeg" data-type="png" data-w="607" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015349249988.jpeg" data-tools-id="71411"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;到此DeadlineRepository安装完成。<br></p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;然后我们安装DeadlineClient（此处任然是服务器，不是客户端）。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.5146443514644351" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029910716.jpeg" data-type="png" data-w="956" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/15650153743756.jpeg" data-tools-id="96880"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;同意License，下一步。<br></p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;Installation Directory的路径同样安装到Y盘。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7425249169435216" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029666494.jpeg" data-type="png" data-w="602" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015403412642.jpeg" data-tools-id="19633"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7424749163879598" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015029614354.jpeg" data-type="png" data-w="598" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015424342696.jpeg" data-tools-id="72903"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7441471571906354" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015030166865.jpeg" data-type="png" data-w="598" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015449837986.jpeg" data-tools-id="82732"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;Repository Directory的路径找到之前安装的位置。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7399328859060402" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015030794890.jpeg" data-type="png" data-w="596" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015463527110.jpeg" data-tools-id="31607"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7373737373737373" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015030161496.jpeg" data-type="png" data-w="594" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015479193360.jpeg" data-tools-id="44839"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.7354409317803661" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015030419212.jpeg" data-type="png" data-w="601" style="" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/156501549572939.jpeg" data-tools-id="21738"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;下一步。<br></p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;到此DeadlineClient安装完成。</p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;然后拷贝Draft.pyd到下面路径</p></li><li><p><br></p></li><li><p><code class="hljs language-python" style="font-size: 0.85em;font-family: Consolas, Inconsolata, Courier, monospace;margin: 0px 0.15em;white-space: pre;overflow: auto;border-radius: 3px;border-width: 1px;border-style: solid;border-color: rgb(204, 204, 204);padding: 0.5em;color: rgb(51, 51, 51);background: rgb(248, 248, 248);text-size-adjust: none;display: block !important;">Y:\Program\DeadlineRepository10\draft\Windows\<span class="hljs-number" style="color: rgb(0, 128, 128);">64</span>bit\</code></p></li><li><p><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;拷贝QtCommercialChart.dll和PatchDeadline.dll两个文件到下面路径</p></li><li><p><br></p></li><li><p><code class="hljs language-python" style="font-size: 0.85em;font-family: Consolas, Inconsolata, Courier, monospace;margin: 0px 0.15em;white-space: pre;overflow: auto;border-radius: 3px;border-width: 1px;border-style: solid;border-color: rgb(204, 204, 204);padding: 0.5em;color: rgb(51, 51, 51);background: rgb(248, 248, 248);text-size-adjust: none;display: block !important;">Y:\Program\Thinkbox\Deadline10\bin\Lib\site-packages\PyQt5\</code></p></li><li><p><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;那么我们怎么在客户端打开Deadline来使用呢？任意找一台客户端机器，找到Y:\Program\Thinkbox\Deadline10\bin\deadlinelauncher.exe</p></li><li><p style="text-align: center;" class=""><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;第一次开启你可能会遇到一个deadline.ini文件找不到的问题，这个文件解决很简单，我们在下面的路径中找到deadline.ini文件</p></li><li><p><br></p></li><li><p><code class="hljs language-python" style="font-size: 0.85em;font-family: Consolas, Inconsolata, Courier, monospace;margin: 0px 0.15em;white-space: pre;overflow: auto;border-radius: 3px;border-width: 1px;border-style: solid;border-color: rgb(204, 204, 204);padding: 0.5em;color: rgb(51, 51, 51);background: rgb(248, 248, 248);text-size-adjust: none;display: block !important;">Y:\Program\Thinkbox\Deadline10\bin\Thinkbox\Deadline10</code></p></li><li><p><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;将它拷贝到客户端机器的C盘位置</p></li><li><p><br></p></li><li><p><code class="hljs language-python" style="font-size: 0.85em;font-family: Consolas, Inconsolata, Courier, monospace;margin: 0px 0.15em;white-space: pre;overflow: auto;border-radius: 3px;border-width: 1px;border-style: solid;border-color: rgb(204, 204, 204);padding: 0.5em;color: rgb(51, 51, 51);background: rgb(248, 248, 248);text-size-adjust: none;display: block !important;">C:\ProgramData\Thinkbox\Deadline10</code></p></li><li><p><br></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;再次启动deadlinelauncher.exe，然后右键启动Launch Monitor。</p></li><li><p style="text-align: left;" class=""><br></p></li><li><p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;就可以看到Deadline农场界面啦。<br></p></li><li><p style="text-align: center;" class=""><img class="rich_pages" data-ratio="0.6255355612682091" data-s="300,640" data-src="http://editor-user.oss-cn-beijing.aliyuncs.com/wechat/40/3/2013103/1565015030999626.jpeg" data-type="png" data-w="1167" style="width: 417px;" src="http://editor-user.oss-cn-beijing.aliyuncs.com/40/3/2013103/1565015108783840.jpeg" data-tools-id="85864"></p></li><li><p>&nbsp;&nbsp;&nbsp;&nbsp;后面会有一个系列文章关于Deadline农场使用方法优化方案以及二次开发，敬请期待！<br></p></li>
+</ul></section>
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ2Ny8yMTk3OQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/zuokangbo/zuokangbo.github.io/2019/08/05/share/集中式部署Deadline/" data-id="cjzzjtpfk005xbksdf9pdlovq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deadline/">Deadline</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/部署/">部署</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/07/share/mklink/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mklink符号链接技术
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/03/share/置换贴图的工作流/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">准确的置换工作流程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+  <div id="comments" class="comments">
+    <div id="uyan_frame"></div>
+  </div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">个人主页</h1>
+    <h2 class="blog-subtitle">愿我的只言片语，为你的成长带来帮助！</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>46</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://space.bilibili.com/17963985" target="_blank" title="bilibili">
+          bilibili
+        </a>
+      
+        <a class="hvr-bounce-in" href="/mimi/grjl.html" target="_blank" title="个人简历">
+          个人简历
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://allzkb.gearhostpreview.com/" target="_blank" title="私有教程链接">
+          私有教程链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="其他链接">
+          其他链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="常用网页">
+          常用网页
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://hdrihaven.com/" target="_blank" title="HDR纹理">
+          HDR纹理
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+
+
+   <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="hide-button">隐藏</div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = 'https://haremu.com/'
+    </script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script>
+    <script type="text/javascript">
+        loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 左康波<br>
+      由强力驱动 | 
+      主题
+      
+        |<script src="http://s11.cnzz.com/z_stat.php?id=1234&web_id=1234" language="JavaScript"></script>
+      
+    </div>
+    
+  </div>
+
+
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/mimi/grjl.html" title="" class="menuItem">简历</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">搜索</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("null", "null");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.article-title').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+  </div>
+</body>
+</html>
