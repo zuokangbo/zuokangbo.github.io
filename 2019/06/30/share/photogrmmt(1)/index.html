@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Photogrammetry-学习(1) | 个人主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Photogrammetry基础介绍">
+<meta name="keywords" content="Photogrammetry,扫描">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Photogrammetry-学习(1)">
+<meta property="og:url" content="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/30/share/photogrmmt(1)/index.html">
+<meta property="og:site_name" content="个人主页">
+<meta property="og:description" content="Photogrammetry基础介绍">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/2.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/3.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/4.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/5.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/6.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/7.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/8.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/9.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/10.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/11.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/13.png">
+<meta property="og:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/12.png">
+<meta property="og:updated_time" content="2019-06-30T06:06:47.483Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Photogrammetry-学习(1)">
+<meta name="twitter:description" content="Photogrammetry基础介绍">
+<meta name="twitter:image" content="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="个人主页" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>47</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-share/photogrmmt(1)" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/30/share/photogrmmt(1)/" class="article-date">
+  <time class="post-time" datetime="2019-06-30T05:58:32.907Z" itemprop="datePublished">
+    <span class="post-month">6月</span><br/>
+    <span class="post-day">30</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Photogrammetry-学习(1)
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Photogrammetry/">Photogrammetry</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2019/06/30/share/photogrmmt(1)/" class="leancloud_visitors" data-flag-title="Photogrammetry-学习(1)">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Photogrammetry基础介绍<br><a id="more"></a><br>
+
+
+<div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Photogrammetry-入坑前言"><a href="#Photogrammetry-入坑前言" class="headerlink"></a><center>Photogrammetry 入坑前言</center></h1><a id="more"></a>
+<p>&emsp;&emsp;最近研究照片扫描技术，并且推荐了一款软件<strong>3DF Zephyr</strong>，但是这款软件的教程太少了，经过我的调查，我发现Agisoft Photoscan是目前比较成熟的软件，就这样我就进了Photogrammetry的大坑。</p>
+<p>&emsp;&emsp; Photogrammetry是什么呢？正如上面的软件介绍一样，它是一种通过一系列的照片还原三维模型的技术。</p>
+<hr>
+<p>&emsp;&emsp; 那Photogrammetry有什么优点，对比目前市场上的其他扫描技术又有什么优势和劣势呢？</p>
+<blockquote>
+<p>Photogrammetry的优点</p>
+<ul>
+<li>通过照片生成模型和纹理，细节丰富到令人发指，模型细腻</li>
+<li>生成速度快，操作相对简单</li>
+<li>制作成本低，甚至可以用手机拍照完成流程</li>
+<li>支持扫描大型物体，甚至是航拍地图</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Photogrammetry的缺点</p>
+<ul>
+<li>无法处理颜色大规模统一的物体（<strong>影响图片识别</strong>）</li>
+<li>无法处理随着角度变化的强烈高光（<strong>影响图片识别</strong>）</li>
+<li>无法处理透明材质（<strong>影响图片识别</strong>）</li>
+<li>无法处理多重相似的图案（<strong>影响图片识别</strong>）</li>
+<li>细小的物体难以生成高质量的模型</li>
+<li>不均匀的光线分布会影响扫描的效果</li>
+<li>拍摄多角度扫描素材比较繁琐</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Photogrammetry与激光扫描的技术对比</p>
+<ul>
+<li>激光扫描的模型精度与Photogrammetry不相上下</li>
+<li>激光扫描可以解决Photogrammetry因为图片识别而无法扫描的硬伤</li>
+<li>高规格的激光扫描方可识别颜色，成本很高</li>
+<li>激光扫描难以胜任大型物体扫描，特别是航拍</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="软件下载"><a href="#软件下载" class="headerlink"></a>软件下载</h1><p><strong>3DF Zephyr</strong></p>
+<p>链接: <a href="https://pan.baidu.com/s/1Rz66Ui1VNWtKZeVh55scmg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Rz66Ui1VNWtKZeVh55scmg</a> 密码: xnwn</p>
+<p><strong>Agisoft Photoscan</strong></p>
+<p>链接: <a href="https://pan.baidu.com/s/1eZlWmDIxRNGhM0ZVnpWAQQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1eZlWmDIxRNGhM0ZVnpWAQQ</a> 密码: g3ne</p>
+<hr>
+<h1 id="Photogrammetry软件操作前期基本流程"><a href="#Photogrammetry软件操作前期基本流程" class="headerlink"></a>Photogrammetry软件操作前期基本流程</h1><h2 id="软件安装"><a href="#软件安装" class="headerlink"></a><strong>软件安装</strong></h2><blockquote>
+<p>打开软件安装包，直接安装。然后将破解文件覆盖快捷方式的启动程序。</p>
+</blockquote>
+<h3 id="启动程序即可看到软件界面"><a href="#启动程序即可看到软件界面" class="headerlink"></a>启动程序即可看到软件界面</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/1.png" title="操作截图"></a></p>
+<h3 id="正式使用之前务必先打开首选项"><a href="#正式使用之前务必先打开首选项" class="headerlink"></a>正式使用之前务必先打开首选项</h3><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/2.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/2.png" title="操作截图"></a></p>
+<h3 id="首选项这里可以修改语言模式"><a href="#首选项这里可以修改语言模式" class="headerlink"></a>首选项这里可以修改语言模式</h3><blockquote>
+<p>不习惯英语的可以修改为中文，在下还是依然使用英文。</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/3.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/3.png" title="操作截图"></a></p>
+<h3 id="另外去到GPU的标签-务必开启CUDA显卡加速"><a href="#另外去到GPU的标签-务必开启CUDA显卡加速" class="headerlink"></a>另外去到GPU的标签 务必开启CUDA显卡加速</h3><blockquote>
+<p>开启之后你就能体验飞一样的感觉（GPU运算速度是CPU的好几倍）<br></p>
+</blockquote>
+<blockquote>
+<p>原谅我的垃圾手提电脑，N卡940M太低端无法识别</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/4.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/4.png" title="操作截图"></a></p>
+<hr>
+<h1 id="基本流程"><a href="#基本流程" class="headerlink"></a><strong>基本流程</strong></h1><h2 id="点击打开workflow"><a href="#点击打开workflow" class="headerlink"></a><strong>点击打开workflow</strong></h2><blockquote>
+<p>截图上的操作就是Photogrammetry的基本流程<br></p>
+</blockquote>
+<blockquote>
+<p>我们需要一步一步去完成操作<br></p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/5.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/5.png" title="操作截图"></a></p>
+<h2 id="Align-Photos-对齐照片"><a href="#Align-Photos-对齐照片" class="headerlink"></a><strong>Align Photos (对齐照片)</strong></h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/6.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/6.png" title="操作截图"></a></p>
+<blockquote>
+<p>这里有几个参数需要注意</p>
+<ul>
+<li>Acurray（识别精度） —— 不建议太高，太高会很慢。我一般选择Medium</li>
+<li>Generic Preselection（常用预选） —— 对图片序列识别进行优化，通常都勾选</li>
+<li>Key Point Limit（关键点上限）—— 建议为0，就是不设上限</li>
+<li>Tie Point Limit（点云上限） —— 同样建议为0，就是不设上限</li>
+<li>Adapt Camera model fitting（适应摄像机的位置）—— 一般都要勾选，特别是应用蒙版的情况</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>设置完成即可运行操作</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/7.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/7.png" title="操作截图"></a></p>
+<blockquote>
+<p>识别完成之后会生成sparse cloud（稀疏点云）<br></p>
+</blockquote>
+<blockquote>
+<p>比较成功的识别结果（图片识别规整)</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/8.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/8.png" title="操作截图"></a></p>
+<blockquote>
+<p>比较失败的识别结果（图片错位)</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/9.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/9.png" title="操作截图"></a></p>
+<blockquote>
+<p>图片错位的原因</p>
+<ul>
+<li>Align Photos 的识别精度太低了或太高了</li>
+<li>照片存在模糊、距离不一、角度偏移等问题</li>
+<li>物体上存在Photogrammetry无法解决的硬伤</li>
+</ul>
+</blockquote>
+<h2 id="Build-Dense-Cloud-（生成密集点云）"><a href="#Build-Dense-Cloud-（生成密集点云）" class="headerlink"></a><strong>Build Dense Cloud （生成密集点云）</strong></h2><p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/10.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/10.png" title="操作截图"></a></p>
+<blockquote>
+<p>参数说明</p>
+<ul>
+<li>Quality（质量） —— 不建议太高，太高会很慢。我一般选择Medium</li>
+<li>Depth filtering（深度过滤） —— 一般为Aggressive或者默认参数</li>
+<li>Calculate point colors（计算顶点颜色） —— 这个务必要勾选，否则生成模型没有颜色</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>只要一开始的 sparse cloud 没有太大问题，那么密集点云的步骤也比较顺利<br>这个步骤需要比较长的运算时间</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/11.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/11.png" title="操作截图"></a></p>
+<blockquote>
+<p>在生成的过程中软件会生成Depth Map来重新构建照片的深度，从而奠定立体生成的基础（这个需要中断生成步骤才可以看到）</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/13.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/13.png" title="操作截图"></a></p>
+<blockquote>
+<p>根据流程生成完毕是这样子的（这个效果是建立在Sparse Cloud的基础上的）</p>
+</blockquote>
+<p><a data-fancybox-href="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/12.png" title="操作截图" rel="fancy-group" class="fancy-ctn fancybox"><img src="https://blog-image-1257068932.cos.ap-guangzhou.myqcloud.com/Photogrammetry/Photogrammetry-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/12.png" title="操作截图"></a></p>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink"></a>总结</h1><blockquote>
+<p>Photogrammetry软件操作前期流程</p>
+<ul>
+<li>通过照片生成稀疏点云</li>
+<li>通过稀疏点云计算Depth Map，生成密集点云</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+  
+
+</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/zuokangbo/zuokangbo.github.io/2019/06/30/share/photogrmmt(1)/" data-id="ck0hijpgx005jsosduorrokos" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Photogrammetry/">Photogrammetry</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/扫描/">扫描</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/14/share/photogrmmt(2)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Photogrammetry-学习(2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/22/share/python学习_3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python系列（三）之高级特性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+  <div id="comments" class="comments">
+    <div id="uyan_frame"></div>
+  </div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=true"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">个人主页</h1>
+    <h2 class="blog-subtitle">愿我的只言片语，为你的成长带来帮助！</h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
+    <h2 class="author">左康波</h2>
+    <h3 class="description">业余文艺cg场景模型师</h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>47</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>19</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>46</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://space.bilibili.com/17963985" target="_blank" title="bilibili">
+          bilibili
+        </a>
+      
+        <a class="hvr-bounce-in" href="/mimi/grjl.html" target="_blank" title="个人简历">
+          个人简历
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://allzkb.gearhostpreview.com/" target="_blank" title="私有教程链接">
+          私有教程链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="其他链接">
+          其他链接
+        </a>
+      
+        <a class="hvr-bounce-in" href="null" target="_blank" title="常用网页">
+          常用网页
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://hdrihaven.com/" target="_blank" title="HDR纹理">
+          HDR纹理
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+
+
+   <link rel="stylesheet" href="/live2d/css/live2d.css" />
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="hide-button">隐藏</div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var message_Path = '/live2d/'
+        var home_Path = 'https://haremu.com/'
+    </script>
+    <script type="text/javascript" src="/live2d/js/live2d.js"></script>
+    <script type="text/javascript" src="/live2d/js/message.js"></script>
+    <script type="text/javascript">
+        loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 左康波<br>
+      由强力驱动 | 
+      主题
+      
+        |<script src="http://s11.cnzz.com/z_stat.php?id=1234&web_id=1234" language="JavaScript"></script>
+      
+    </div>
+    
+  </div>
+
+
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/mimi/grjl.html" title="" class="menuItem">简历</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">搜索</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("null", "null");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.article-title').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+<title>123.htm</title>
+<script language="javascript">
+function userlogin(){
+txt=prompt("请你输入查看密码，管理员联系方式：qq：1156298563，或邮箱","如果不知道请联系管理员");
+
+if (txt!='jiaocheng') {
+alert("密码不正确,无法进入本站!!");
+window.opener=null;
+window.location.href="b.html";
+
+}else{
+alert("登陆成功！");
+window.location.href="https://zuokangbo.github.io/jiaocheng.html";
+
+}
+}
+userlogin();
+</script>
